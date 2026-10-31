@@ -1,0 +1,26 @@
+:root {
+  color-scheme: light;
+  --ink: #38302e;
+  --muted: #837873;
+  --rose: #ce9290;
+  --rose-deep: #a9686d;
+  --gold: #c2a16e;
+  --paper: #faf5f2;
+  --cream: #fffdfa;
+  --serif: "Playfair Display", Georgia, serif;
+  --sans: "DM Sans", "Segoe UI", sans-serif;
+}
+
+* { box-sizing: border-box; }
+html { scroll-behavior: smooth; scroll-padding-top: 20px; }
+body { min-width: 320px; margin: 0; background: var(--paper); color: var(--ink); font-family: var(--sans); -webkit-font-smoothing: antialiased; }
+button, a { -webkit-tap-highlight-color: transparent; }
+button:focus-visible, a:focus-visible { outline: 2px solid var(--rose-deep); outline-offset: 4px; }
+img { display: block; }
+.reveal-pending { opacity: 0; transform: translateY(17px); transition: opacity .65s ease, transform .65s ease; }
+.reveal-pending.revealed { opacity: 1; transform: translateY(0); }
+
+@media (prefers-reduced-motion: reduce) {
+  *, *::before, *::after { scroll-behavior: auto !important; animation-duration: .01ms !important; animation-iteration-count: 1 !important; transition-duration: .01ms !important; }
+  .reveal-pending { opacity: 1; transform: none; }
+}

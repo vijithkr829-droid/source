@@ -1,0 +1,12 @@
+<article class="letter-card" appReveal aria-label="A birthday letter">
+  <div class="letter-topline">
+    <span class="letter-rule"></span>
+    <span class="letter-label">A letter, with love</span>
+    <span class="letter-rule"></span>
+  </div>
+  <p class="salutation">{{ salutation }}</p>
+  @for (paragraph of paragraphs; track paragraph) {
+    <p class="letter-paragraph">{{ paragraph }}</p>
+  }
+  <p class="letter-signature">With the warmest birthday wishes<span aria-hidden="true">.</span></p>
+</article>

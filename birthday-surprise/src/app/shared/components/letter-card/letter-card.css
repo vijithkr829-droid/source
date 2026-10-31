@@ -1,0 +1,10 @@
+:host { display: block; width: min(790px, 100%); margin: 0 auto; }
+.letter-card { position: relative; padding: 45px 64px 48px; border: 1px solid #eadbd2; background: linear-gradient(140deg, #fffdfa, #fffaf5); box-shadow: 0 14px 40px rgba(87,59,48,.055); }
+.letter-card::before { position: absolute; inset: 9px; border: 1px solid rgba(200,167,119,.21); content: ""; pointer-events: none; }
+.letter-topline { display: flex; align-items: center; justify-content: center; gap: 12px; margin-bottom: 29px; }
+.letter-rule { width: 29px; height: 1px; background: var(--gold); }
+.letter-label { color: var(--rose-deep); font-size: 9px; font-weight: 700; letter-spacing: 1.8px; text-transform: uppercase; }
+.salutation { margin-bottom: 14px; color: var(--ink); font-family: var(--serif); font-size: 22px; }
+.letter-paragraph { margin-bottom: 13px; color: #786c68; font-family: var(--serif); font-size: 15px; line-height: 1.95; }
+.letter-signature { margin: 23px 0 0; color: var(--rose-deep); font-family: var(--serif); font-size: 17px; font-style: italic; }
+@media (max-width: 600px) { .letter-card { padding: 34px 26px 36px; } .letter-paragraph { font-size: 14px; line-height: 1.85; } }

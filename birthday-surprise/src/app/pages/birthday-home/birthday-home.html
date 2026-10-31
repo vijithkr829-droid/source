@@ -1,0 +1,78 @@
+<div class="home-page">
+  <section class="opening section-wrap">
+    <div class="opening-copy" appReveal>
+      <p class="eyebrow"><span></span> A little something just for you</p>
+      <p class="recipient-name">{{ recipientName }}<span class="name-period">.</span></p>
+      <h1>Today, the world celebrates someone who makes it a little more <em>beautiful.</em></h1>
+      <p class="opening-intro">Some people make ordinary moments feel special without even trying. Today is about celebrating you, the little things that make you who you are, and all the happiness you deserve.</p>
+      <a class="button button-dark" routerLink="/surprise" (click)="openSurprise()">Open your birthday surprise <span aria-hidden="true">↗</span></a>
+      <p class="opening-footnote"><span aria-hidden="true">✦</span> A day made brighter, simply because it is yours</p>
+    </div>
+    <figure class="opening-image" appReveal>
+      <img
+        src="/assets/images/photo-1.svg"
+        alt="Replace with a description of the birthday photograph"
+        width="800"
+        height="980"
+        fetchpriority="high"
+        (error)="hideMissingImage($event)"
+      >
+      <div class="opening-image-fallback" aria-hidden="true"><span>V.</span></div>
+      <figcaption><span>A little moment, kept close</span><span>01 / 06</span></figcaption>
+      <span class="image-note">The loveliest<br>kind of day</span>
+    </figure>
+    <span class="opening-side-note" aria-hidden="true">A CELEBRATION OF YOU</span>
+  </section>
+
+  <section class="letter-section section-pad" id="letter">
+    <div class="section-heading" appReveal>
+      <p class="eyebrow">From the heart</p>
+      <h2>A birthday <em>letter.</em></h2>
+      <p>A few words to keep close, today and whenever you need them.</p>
+    </div>
+    <app-letter-card [salutation]="letter.salutation" [paragraphs]="letter.paragraphs" />
+  </section>
+
+  <section class="memories-section section-pad">
+    <div class="section-heading section-heading-row" appReveal>
+      <div>
+        <p class="eyebrow">A few little moments</p>
+        <h2>Some memories deserve<br>a beautiful <em>place to live.</em></h2>
+      </div>
+      <p>Six frames for favorite photographs. Replace the sample paths with your own pictures whenever you are ready.</p>
+    </div>
+    <app-photo-gallery [photos]="memories" />
+  </section>
+
+  <section class="qualities-section section-pad">
+    <div class="section-heading" appReveal>
+      <p class="eyebrow">A few things worth celebrating</p>
+      <h2>All the little things<br>that make you <em>you.</em></h2>
+    </div>
+    <div class="qualities-grid">
+      @for (quality of qualities; track quality.number) {
+        <article class="quality-card" appReveal>
+          <span class="quality-number">{{ quality.number }}</span>
+          <h3>{{ quality.title }}</h3>
+          <p>{{ quality.detail }}</p>
+        </article>
+      }
+    </div>
+  </section>
+
+  <section class="birthday-wish section-pad" appReveal>
+    <div class="wish-frame">
+      <p class="eyebrow">For the year ahead</p>
+      <h2>May this year<br>be kind to <em>you.</em></h2>
+      <p>My wish for you is simple: may life be gentle with your heart, may your efforts bring you closer to your dreams, and may you always find reasons to laugh, even on difficult days. May you meet people who appreciate your honesty, celebrate your achievements, and remind you how capable you are when you forget it yourself. I hope this year gives you beautiful surprises, peaceful mornings, unforgettable adventures, and happiness in the smallest things.</p>
+      <span class="wish-signature">With the warmest birthday wishes.</span>
+    </div>
+  </section>
+
+  <section class="next-chapter section-pad" appReveal>
+    <p class="eyebrow">Whenever you are ready</p>
+    <h2>There’s one more<br><em>little surprise.</em></h2>
+    <p>Another quiet corner, with a few more words to keep.</p>
+    <a class="button button-outline" routerLink="/surprise" (click)="openSurprise()">There’s one more little surprise <span aria-hidden="true">↗</span></a>
+  </section>
+</div>

@@ -1,0 +1,23 @@
+<header class="site-header">
+  <a class="wordmark" routerLink="/" aria-label="A little birthday love, home">
+    <span class="wordmark-mark" aria-hidden="true">V.</span>
+    <span>made for your day</span>
+  </a>
+  <nav class="site-nav" aria-label="Main navigation">
+    <a routerLink="/" routerLinkActive="active" [routerLinkActiveOptions]="{ exact: true }">Her special day</a>
+    <a routerLink="/surprise" routerLinkActive="active">A little more <span aria-hidden="true">↗</span></a>
+  </nav>
+</header>
+
+<a class="skip-link" href="#main-content">Skip to content</a>
+<main class="route-shell" id="main-content">
+  <router-outlet />
+</main>
+
+<app-music-player />
+
+<footer class="site-footer">
+  <span>Made with care, especially for you</span>
+  <span class="footer-divider" aria-hidden="true"></span>
+  <span>With the warmest wishes</span>
+</footer>

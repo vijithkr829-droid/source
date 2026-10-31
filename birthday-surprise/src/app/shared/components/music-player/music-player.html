@@ -1,0 +1,27 @@
+<aside class="music-widget" aria-label="Background music controls">
+  @if (music.error()) {
+    <p class="music-error" role="status">{{ music.error() }}</p>
+  }
+  <span class="music-state" [class.is-playing]="music.playing()">
+    <span class="equalizer" aria-hidden="true"><i></i><i></i><i></i></span>
+    A little music
+  </span>
+  <button
+    class="music-control"
+    type="button"
+    [attr.aria-label]="music.playing() ? 'Pause background music' : 'Play background music'"
+    [attr.aria-pressed]="music.playing()"
+    (click)="music.togglePlayback()"
+  >
+    <span aria-hidden="true">{{ music.playing() ? 'Ⅱ' : '▶' }}</span>
+  </button>
+  <button
+    class="music-control mute-control"
+    type="button"
+    [attr.aria-label]="music.muted() ? 'Unmute background music' : 'Mute background music'"
+    [attr.aria-pressed]="music.muted()"
+    (click)="music.toggleMuted()"
+  >
+    <span aria-hidden="true">{{ music.muted() ? '×' : '♫' }}</span>
+  </button>
+</aside>

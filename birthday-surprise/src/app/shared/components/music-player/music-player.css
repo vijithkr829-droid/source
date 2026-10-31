@@ -1,0 +1,15 @@
+:host { position: fixed; z-index: 10; right: 24px; bottom: 20px; }
+.music-widget { position: relative; display: flex; align-items: center; gap: 8px; min-height: 45px; padding: 6px 8px 6px 14px; border: 1px solid rgba(255,255,255,.86); border-radius: 30px; background: rgba(255,253,250,.94); box-shadow: 0 7px 25px rgba(62,45,46,.12); backdrop-filter: blur(12px); }
+.music-state { display: flex; align-items: center; gap: 7px; color: #806d69; font-size: 9px; white-space: nowrap; }
+.music-state.is-playing { color: var(--rose-deep); }
+.equalizer { display: flex; height: 12px; align-items: center; gap: 2px; }
+.equalizer i { width: 2px; height: 4px; border-radius: 2px; background: var(--rose); }
+.is-playing .equalizer i { animation: sound-wave .7s ease-in-out infinite alternate; }
+.is-playing .equalizer i:nth-child(2) { animation-delay: .2s; }
+.is-playing .equalizer i:nth-child(3) { animation-delay: .4s; }
+.music-control { display: grid; width: 31px; height: 31px; place-items: center; border: 1px solid #e8d9d4; border-radius: 50%; background: #fffdfa; color: var(--ink); font-size: 11px; cursor: pointer; transition: background .2s ease, color .2s ease; }
+.music-control:hover { background: var(--ink); color: white; }
+.mute-control { color: var(--rose-deep); }
+.music-error { position: absolute; right: 0; bottom: calc(100% + 11px); width: min(310px, calc(100vw - 42px)); margin: 0; padding: 11px 14px; border: 1px solid #edc9c4; border-radius: 8px; background: #fffdfa; box-shadow: 0 7px 20px rgba(62,45,46,.1); color: #80515b; font-size: 10px; line-height: 1.5; }
+@keyframes sound-wave { to { height: 12px; } }
+@media (max-width: 600px) { :host { right: 13px; bottom: 12px; } .music-widget { min-height: 41px; padding: 5px 6px 5px 11px; } .music-control { width: 29px; height: 29px; } .music-state { font-size: 8px; } }

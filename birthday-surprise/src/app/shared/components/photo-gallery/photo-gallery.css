@@ -1,0 +1,23 @@
+:host { display: block; }
+.photo-grid { display: grid; grid-template-columns: repeat(6, minmax(0, 1fr)); grid-auto-rows: 175px; gap: 14px; }
+.photo-card { position: relative; min-width: 0; margin: 0; overflow: hidden; background: linear-gradient(145deg, #eadbd3, #f3e8de 53%, #ddc7bf); isolation: isolate; }
+.photo-featured { grid-row: span 2; grid-column: span 2; }
+.photo-card:nth-child(2), .photo-card:nth-child(3) { grid-column: span 4; }
+.photo-card:nth-child(n+4) { grid-column: span 2; }
+.photo-card:nth-child(2) { background: linear-gradient(145deg, #e8d8d6, #f4e7e1 60%, #d7c3ba); }
+.photo-card:nth-child(3) { background: linear-gradient(145deg, #e8e1d7, #f4ece2 60%, #d8cbb9); }
+.photo-card:nth-child(4) { background: linear-gradient(145deg, #deddd1, #ece9dc 60%, #cfcab8); }
+.photo-card:nth-child(5) { background: linear-gradient(145deg, #ebdbd8, #f4e7e3 60%, #d8c2bc); }
+.photo-card:nth-child(6) { background: linear-gradient(145deg, #e5ddd1, #f2eade 60%, #d2c4b5); }
+.photo-card img { position: absolute; z-index: -1; inset: 0; width: 100%; height: 100%; object-fit: cover; transition: transform .75s cubic-bezier(.2,.7,.2,1); }
+.photo-card:hover img { transform: scale(1.045); }
+.photo-card::after { position: absolute; z-index: -1; inset: 40% 0 0; background: linear-gradient(transparent, rgba(38,30,29,.46)); content: ""; }
+.photo-placeholder { position: absolute; z-index: -2; inset: 0; display: grid; place-items: center; }
+.photo-placeholder span { display: grid; width: 62px; height: 62px; place-items: center; border: 1px solid rgba(255,255,255,.67); border-radius: 50%; color: rgba(255,255,255,.88); font-family: var(--serif); font-size: 23px; font-style: italic; }
+figcaption { position: absolute; right: 15px; bottom: 14px; left: 17px; display: flex; align-items: end; justify-content: space-between; gap: 10px; color: white; }
+.photo-caption { font-family: var(--serif); font-size: 14px; }
+.photo-index { font-size: 8px; letter-spacing: 1px; opacity: .8; }
+.photo-grid-compact { grid-template-columns: repeat(3, minmax(0, 1fr)); grid-auto-rows: 160px; }
+.photo-grid-compact .photo-featured { grid-row: auto; }
+@media (max-width: 760px) { .photo-grid { grid-template-columns: repeat(2, minmax(0, 1fr)); grid-auto-rows: 205px; } .photo-featured, .photo-card:nth-child(2), .photo-card:nth-child(3), .photo-card:nth-child(n+4) { grid-column: span 1; grid-row: span 1; } .photo-grid-compact { grid-auto-rows: 150px; } }
+@media (max-width: 460px) { .photo-grid { gap: 9px; grid-auto-rows: 155px; } .photo-caption { font-size: 12px; } .photo-grid-compact { grid-auto-rows: 118px; } }

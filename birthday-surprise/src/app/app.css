@@ -1,0 +1,37 @@
+:host { display: block; min-height: 100vh; }
+
+.site-header {
+  position: relative;
+  z-index: 4;
+  width: min(1240px, calc(100% - 88px));
+  height: 82px;
+  margin: 0 auto;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  border-bottom: 1px solid rgba(104, 78, 70, .12);
+}
+
+.wordmark { display: inline-flex; align-items: center; gap: 11px; font-family: var(--serif); font-size: 15px; font-style: italic; text-decoration: none; }
+.wordmark-mark { display: grid; width: 31px; height: 31px; place-items: center; border: 1px solid var(--gold); border-radius: 50%; color: var(--rose-deep); font-family: var(--serif); font-size: 13px; font-style: normal; }
+.site-nav { display: flex; align-items: center; gap: 35px; }
+.site-nav a { color: var(--muted); font-size: 11px; text-decoration: none; transition: color .2s ease; }
+.site-nav a:hover, .site-nav a.active { color: var(--ink); }
+.site-nav a.active { font-weight: 700; }
+.site-nav a span { padding-left: 4px; color: var(--rose-deep); }
+.route-shell { min-height: 60vh; }
+.skip-link { position: absolute; z-index: 20; top: 8px; left: 8px; padding: 10px 14px; transform: translateY(-160%); background: var(--ink); color: white; font-size: 12px; }
+.skip-link:focus { transform: translateY(0); }
+.route-shell > * { display: block; }
+.route-shell > * > :first-child { scroll-margin-top: 18px; }
+.site-footer { min-height: 78px; display: flex; align-items: center; justify-content: center; gap: 20px; border-top: 1px solid rgba(104, 78, 70, .12); color: var(--muted); font-size: 10px; letter-spacing: .3px; }
+.footer-divider { width: 4px; height: 4px; border-radius: 50%; background: var(--gold); }
+
+@media (max-width: 600px) {
+  .site-header { width: calc(100% - 36px); height: 70px; }
+  .wordmark { gap: 7px; font-size: 12px; }
+  .wordmark-mark { width: 27px; height: 27px; }
+  .site-nav { gap: 16px; }
+  .site-nav a { font-size: 9px; }
+  .site-footer { min-height: 69px; gap: 11px; font-size: 8px; }
+}

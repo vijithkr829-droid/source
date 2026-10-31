@@ -1,0 +1,20 @@
+<div class="photo-grid" [class.photo-grid-compact]="compact">
+  @for (photo of photos; track photo.src; let index = $index) {
+    <figure class="photo-card" [class.photo-featured]="!compact && index === 0" appReveal>
+      <img
+        [src]="photo.src"
+        [alt]="photo.alt"
+        [attr.width]="index === 0 && !compact ? 960 : 640"
+        [attr.height]="index === 0 && !compact ? 1200 : 760"
+        [attr.fetchpriority]="index === 0 && !compact ? 'high' : null"
+        [loading]="index === 0 && !compact ? 'eager' : 'lazy'"
+        (error)="markImageUnavailable($event)"
+      >
+      <span class="photo-placeholder" aria-hidden="true"><span>V.</span></span>
+      <figcaption>
+        <span class="photo-caption">{{ photo.caption }}</span>
+        <span class="photo-index">0{{ index + 1 }}</span>
+      </figcaption>
+    </figure>
+  }
+</div>
