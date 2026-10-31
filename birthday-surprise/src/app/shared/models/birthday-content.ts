@@ -29,7 +29,10 @@ export const recipientName = 'Veda';
 export const birthdayLetter = {
   salutation: `Happy Birthday, ${recipientName}.`,
   paragraphs: [
-    'I hope this next trip around the sun brings you new places to explore, people who make you laugh until your cheeks hurt, and plenty of ordinary days that turn out to be your favorites. You deserve all of it.',
+    'Today is a little reminder of how much your being here matters. The world is brighter with your kindness in it, and the people lucky enough to know you carry more happy moments because of you.',
+    'I hope this new year gives you reasons to laugh until your cheeks hurt, quiet moments when you need them, and the courage to follow the things that make your heart feel awake. And on the days that feel ordinary, I hope you still find something small that makes you glad to be right where you are.',
+    'You do not have to have everything figured out to be doing wonderfully. Keep growing at your own pace, keep making room for what feels like you, and remember to be proud of how far you have already come.',
+    'Most of all, I hope you feel celebrated today—not just for another year, but for the person you are in every little, everyday way. You deserve so much good, Veda. Happy birthday, and here is to all the lovely things still waiting for you.',
   ],
 };
 
@@ -61,4 +64,11 @@ export const birthdayNotes: readonly BirthdayNote[] = [
   { id: 'adventure', number: '01', title: 'For the dreamers', message: 'May you find a new place that makes you stop, look around, and think: I’m glad I came.' },
   { id: 'laughter', number: '02', title: 'For the laugh-out-loud days', message: 'Wishing you belly laughs, terrible inside jokes, and friends who always make room for one more story.' },
   { id: 'quiet', number: '03', title: 'For a softer moment', message: 'Here’s your reminder that a slow day, a deep breath, and doing absolutely nothing can be a pretty perfect gift.' },
+  { id: 'confidence', number: '04', title: 'For a little courage', message: 'You do not need to have it all figured out. Take the next small step, and let that be enough for today.' },
+  { id: 'pride', number: '05', title: 'For the wins you almost missed', message: 'Think of one thing you did this year that made you proud. It counts, even if nobody else saw it.' },
+  { id: 'kindness', number: '06', title: 'For a kinder year', message: 'May you give yourself the same patience, encouragement, and second chances you so freely give to others.' },
+  { id: 'beginnings', number: '07', title: 'For a fresh start', message: 'You can begin again whenever you need to. A new page does not ask you to explain the old one.' },
+  { id: 'friendship', number: '08', title: 'For your favorite people', message: 'May your year be full of the people who make you feel at home, even when you are somewhere new.' },
+  { id: 'wonder', number: '09', title: 'For everyday magic', message: 'Keep an eye out for tiny lovely things: warm light, a familiar song, and a message that arrives right on time.' },
+  { id: 'possibility', number: '10', title: 'For all that is still ahead', message: 'There are good surprises you cannot see yet. Leave a little room in your plans for them.' },
 ];

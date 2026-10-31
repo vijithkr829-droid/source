@@ -19,7 +19,6 @@ button:focus-visible, a:focus-visible { outline: 2px solid var(--rose-deep); out
 img { display: block; }
 .reveal-pending { opacity: 0; transform: translateY(17px); transition: opacity .65s ease, transform .65s ease; }
 .reveal-pending.revealed { opacity: 1; transform: translateY(0); }
-app-birthday-home section[id] { scroll-margin-top: 90px; }
 
 .birthday-plan { display: grid; grid-template-columns: .8fr 1.2fr; align-items: center; gap: 85px; background: var(--cream); }
 .plan-heading { max-width: 370px; }
@@ -75,7 +74,7 @@ app-birthday-home section[id] { scroll-margin-top: 90px; }
   .birthday-challenge { grid-template-columns: 29px minmax(0, 1fr); gap: 9px; min-height: 64px; }
   .birthday-challenge > span:nth-child(2) { font-size: 15px; }
   .challenge-note { grid-column: 2; margin-top: -6px; }
-  .closing-note { padding: 59px 20px max(100px, env(safe-area-inset-bottom)); }
+  .closing-note { padding: 59px 20px max(65px, env(safe-area-inset-bottom)); }
 }
 
 @media (prefers-reduced-motion: reduce) {
@@ -85,6 +84,5 @@ app-birthday-home section[id] { scroll-margin-top: 90px; }
 }
 
 @media (max-width: 760px) {
-  html { scroll-padding-top: 112px; }
-  app-birthday-home section[id] { scroll-margin-top: 112px; }
+  html { scroll-padding-top: 16px; }
 }

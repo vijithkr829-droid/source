@@ -1,4 +1,4 @@
-import { birthdayChallenges, birthdayMoments, memories } from './shared/models/birthday-content';
+import { birthdayChallenges, birthdayMoments, birthdayNotes, memories } from './shared/models/birthday-content';
 import { routes } from './app.routes';
 
 describe('Birthday experience content', () => {
@@ -22,5 +22,10 @@ describe('Birthday experience content', () => {
     expect(birthdayMoments).toHaveLength(4);
     expect(birthdayChallenges).toHaveLength(5);
     expect(new Set(birthdayChallenges.map((challenge) => challenge.id)).size).toBe(birthdayChallenges.length);
+  });
+
+  it('offers ten distinct birthday notes', () => {
+    expect(birthdayNotes).toHaveLength(10);
+    expect(new Set(birthdayNotes.map((note) => note.id)).size).toBe(birthdayNotes.length);
   });
 });

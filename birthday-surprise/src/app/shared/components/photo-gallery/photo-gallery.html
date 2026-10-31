@@ -1,6 +1,6 @@
 <div class="photo-grid" [class.photo-grid-compact]="compact">
   @for (photo of photos; track photo.src; let index = $index) {
-    <figure class="photo-card" [class.photo-featured]="!compact && index === 0" appReveal>
+    <figure class="photo-card" appReveal>
       <img
         [src]="photo.src"
         [alt]="photo.alt"
