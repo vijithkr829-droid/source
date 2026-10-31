@@ -1,45 +1,252 @@
-:host { display: block; min-height: 100vh; }
-
-.site-header {
-  position: sticky;
-  top: 0;
-  z-index: 10;
-  width: min(1240px, calc(100% - 88px));
-  height: 82px;
-  margin: 0 auto;
-  display: flex;
-  align-items: center;
-  justify-content: space-between;
-  border-bottom: 1px solid rgba(104, 78, 70, .12);
-  background: rgba(250, 245, 242, .95);
-  backdrop-filter: blur(14px);
+:host {
+  display: block;
+  min-height: 100vh;
+  background-color: var(--paper, #faf5f2);
+  color: var(--ink, #38302e);
+  font-family: var(--sans, "Segoe UI", sans-serif);
 }
 
-.wordmark { display: inline-flex; align-items: center; gap: 11px; font-family: var(--serif); font-size: 15px; font-style: italic; text-decoration: none; }
-.wordmark-mark { display: grid; width: 31px; height: 31px; place-items: center; border: 1px solid var(--gold); border-radius: 50%; color: var(--rose-deep); font-family: var(--serif); font-size: 13px; font-style: normal; }
-.site-nav { display: flex; align-items: center; gap: clamp(12px, 2vw, 28px); }
-.site-nav a { min-height: 44px; display: inline-flex; align-items: center; color: var(--muted); font-size: 10px; text-decoration: none; transition: color .2s ease; }
-.site-nav a:hover, .site-nav a:focus-visible { color: var(--rose-deep); }
-.route-shell { min-height: 60vh; }
-.skip-link { position: absolute; z-index: 20; top: 8px; left: 8px; padding: 10px 14px; transform: translateY(-160%); background: var(--ink); color: white; font-size: 12px; }
-.skip-link:focus { transform: translateY(0); }
-.route-shell > * { display: block; }
-.site-footer { min-height: 78px; display: flex; align-items: center; justify-content: center; gap: 20px; border-top: 1px solid rgba(104, 78, 70, .12); color: var(--muted); font-size: 10px; letter-spacing: .3px; }
-.footer-divider { width: 4px; height: 4px; border-radius: 50%; background: var(--gold); }
+/* ==========================================================================
+   Header & Wordmark
+   ========================================================================== */
+.site-header {
+  position: relative;
+  z-index: 10;
+  width: min(1240px, calc(100% - 64px));
+  margin: 0 auto;
+  padding: 24px 0 20px;
+  border-bottom: 1px solid rgba(132, 84, 91, 0.08);
+}
 
+.header-inner {
+  display: flex;
+  flex-direction: column;
+  align-items: stretch;
+}
+
+.wordmark {
+  display: inline-flex;
+  align-items: center;
+  gap: 12px;
+  font-family: var(--serif, Georgia, serif);
+  font-size: 16px;
+  font-style: italic;
+  text-decoration: none;
+  color: var(--ink, #332627);
+  transition: opacity 0.2s ease;
+}
+
+.wordmark:hover {
+  opacity: 0.8;
+}
+
+.wordmark-mark {
+  display: grid;
+  width: 36px;
+  height: 36px;
+  place-items: center;
+  background: linear-gradient(135deg, rgba(215, 186, 138, 0.15), rgba(215, 186, 138, 0.3));
+  border: 1px solid var(--gold, #d7ba8a);
+  border-radius: 50%;
+  color: var(--rose-deep, #80515b);
+  font-family: var(--serif, Georgia, serif);
+  font-size: 14px;
+  font-style: normal;
+  font-weight: 600;
+  box-shadow: 0 2px 8px rgba(132, 84, 91, 0.06);
+}
+
+/* ==========================================================================
+   Navigation
+   ========================================================================== */
+.site-nav {
+  position: relative;
+  width: 100%;
+  display: grid;
+  grid-template-columns: repeat(5, minmax(0, 1fr));
+  margin-top: 18px;
+  overflow: hidden;
+  border-radius: 6px 28px 6px 28px;
+  background: linear-gradient(135deg, #7c4d55 0%, #945d63 50%, #764852 100%);
+  box-shadow: 0 12px 30px -8px rgba(124, 77, 85, 0.25),
+              0 4px 12px rgba(0, 0, 0, 0.04);
+}
+
+.site-nav::before {
+  position: absolute;
+  inset: 0 auto 0 0;
+  width: 5px;
+  background: linear-gradient(to bottom, #f2dcbb, #d7ba8a);
+  content: "";
+}
+
+.site-nav a {
+  position: relative;
+  min-height: 56px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  gap: 10px;
+  padding: 10px 14px;
+  color: #fff9f3;
+  font-size: 11px;
+  font-weight: 500;
+  letter-spacing: 0.4px;
+  text-decoration: none;
+  transition: background 0.25s ease, transform 0.25s ease;
+}
+
+.site-nav a + a {
+  border-left: 1px solid rgba(255, 249, 243, 0.12);
+}
+
+.site-nav a > span {
+  color: #f2dcbb;
+  font-size: 16px;
+  transition: transform 0.25s cubic-bezier(0.34, 1.56, 0.64, 1);
+}
+
+.site-nav a:hover,
+.site-nav a:focus-visible {
+  background: rgba(255, 255, 255, 0.14);
+  color: #ffffff;
+}
+
+.site-nav a:focus-visible {
+  z-index: 1;
+  outline: 2px solid #fff9f3;
+  outline-offset: -4px;
+}
+
+.site-nav a:hover > span,
+.site-nav a:focus-visible > span {
+  transform: scale(1.15) rotate(6deg);
+}
+
+/* ==========================================================================
+   Accessibility & Shell
+   ========================================================================== */
+.skip-link {
+  position: absolute;
+  z-index: 20;
+  top: 12px;
+  left: 12px;
+  padding: 10px 16px;
+  transform: translateY(-200%);
+  background: var(--ink, #332627);
+  color: white;
+  font-size: 12px;
+  font-weight: 500;
+  border-radius: 6px;
+  box-shadow: 0 4px 12px rgba(0,0,0,0.15);
+  transition: transform 0.2s ease;
+}
+
+.skip-link:focus {
+  transform: translateY(0);
+}
+
+.route-shell {
+  min-height: 60vh;
+}
+
+.route-shell > * {
+  display: block;
+}
+
+/* ==========================================================================
+   Footer
+   ========================================================================== */
+.site-footer {
+  min-height: 84px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  gap: 24px;
+  margin-top: 40px;
+  border-top: 1px solid rgba(132, 84, 91, 0.1);
+  color: var(--muted, #8c7873);
+  font-size: 11px;
+  letter-spacing: 0.5px;
+}
+
+.footer-divider {
+  width: 5px;
+  height: 5px;
+  border-radius: 50%;
+  background: var(--gold, #d7ba8a);
+  box-shadow: 0 0 8px rgba(215, 186, 138, 0.5);
+}
+
+/* ==========================================================================
+   Responsive Media Queries
+   ========================================================================== */
 @media (max-width: 760px) {
-  .site-header { position: relative; top: auto; width: 100%; height: auto; min-height: 112px; flex-wrap: wrap; justify-content: flex-start; gap: 3px; padding: 9px 18px 5px; }
-  .wordmark { gap: 7px; font-size: 13px; }
-  .wordmark-mark { width: 27px; height: 27px; }
-  .site-nav { width: calc(100% + 10px); display: flex; flex-wrap: wrap; gap: 0 5px; margin: 0 -5px; }
-  .site-nav a { min-height: 38px; padding: 0 9px; font-size: 10px; }
+  .site-header {
+    width: 100%;
+    padding: 16px 20px;
+    border-bottom: none;
+  }
+
+  .wordmark {
+    justify-content: center;
+    font-size: 14px;
+  }
+
+  .wordmark-mark {
+    width: 32px;
+    height: 32px;
+  }
+
+  .site-nav {
+    grid-template-columns: repeat(2, minmax(0, 1fr));
+    margin-top: 6px;
+    border-radius: 4px 20px 4px 20px;
+  }
+
+  .site-nav a {
+    min-height: 48px;
+    justify-content: flex-start;
+    padding: 8px 16px;
+    font-size: 11px;
+  }
+
+  .site-nav a:nth-child(odd) {
+    border-left: 0;
+  }
+
+  .site-nav a:nth-child(n + 3) {
+    border-top: 1px solid rgba(255, 249, 243, 0.12);
+  }
+
+  .site-nav a:last-child {
+    grid-column: 1 / -1;
+    justify-content: center;
+  }
 }
 
 @media (max-width: 600px) {
-  .site-header { padding-right: max(16px, env(safe-area-inset-right)); padding-left: max(16px, env(safe-area-inset-left)); }
-  .site-footer { min-height: 69px; flex-wrap: wrap; gap: 8px; padding: 14px; padding-bottom: max(14px, env(safe-area-inset-bottom)); font-size: 9px; }
+  .site-header {
+    padding-right: max(16px, env(safe-area-inset-right));
+    padding-left: max(16px, env(safe-area-inset-left));
+  }
+
+  .site-footer {
+    min-height: 74px;
+    flex-wrap: wrap;
+    gap: 12px;
+    padding: 16px;
+    padding-bottom: max(16px, env(safe-area-inset-bottom));
+    font-size: 10px;
+    text-align: center;
+  }
 }
 
 @media (prefers-reduced-motion: reduce) {
-  .site-nav a { transition: none; }
+  .site-nav a,
+  .site-nav a > span,
+  .wordmark,
+  .skip-link {
+    transition: none;
+  }
 }
