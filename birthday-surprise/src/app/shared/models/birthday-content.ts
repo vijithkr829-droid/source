@@ -37,12 +37,12 @@ export const birthdayLetter = {
 };
 
 export const memories: readonly PhotoItem[] = [
-  { src: 'assets/images/photo-1.svg', alt: 'Replace with a description of photo one', caption: 'Add photo one' },
-  { src: 'assets/images/photo-2.svg', alt: 'Replace with a description of photo two', caption: 'Add photo two' },
-  { src: 'assets/images/photo-3.svg', alt: 'Replace with a description of photo three', caption: 'Add photo three' },
-  { src: 'assets/images/photo-4.svg', alt: 'Replace with a description of photo four', caption: 'Add photo four' },
-  { src: 'assets/images/photo-5.svg', alt: 'Replace with a description of photo five', caption: 'Add photo five' },
-  { src: 'assets/images/photo-6.svg', alt: 'Replace with a description of photo six', caption: 'Add photo six' },
+  { src: 'assets/images/memory-01.jpeg', alt: 'Veda with a yellow flower tucked behind her ear', caption: 'A little sunshine' },
+  { src: 'assets/images/memory-02.jpeg', alt: 'Veda smiling among bright bougainvillea flowers', caption: 'In a garden of blooms' },
+  { src: 'assets/images/memory-03.jpeg', alt: 'Veda exploring a historic temple courtyard', caption: 'A day among old stones' },
+  { src: 'assets/images/memory-04.jpeg', alt: 'Veda sitting beneath a temple arch and looking toward the courtyard', caption: 'A quiet temple moment' },
+  { src: 'assets/images/memory-05.jpeg', alt: 'Veda beneath a tree in a historic temple courtyard', caption: 'Under the temple trees' },
+  { src: 'assets/images/memory-06.jpeg', alt: 'Veda among flowering bougainvillea in warm sunlight', caption: 'Wrapped in bougainvillea' },
 ];
 
 export const birthdayMoments: readonly BirthdayMoment[] = [

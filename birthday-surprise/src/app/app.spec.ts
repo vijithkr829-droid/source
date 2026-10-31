@@ -5,12 +5,12 @@ describe('Birthday experience content', () => {
   it('offers exactly six replaceable photo slots', () => {
     expect(memories).toHaveLength(6);
     expect(memories.map((photo) => photo.src)).toEqual([
-      'assets/images/photo-1.svg',
-      'assets/images/photo-2.svg',
-      'assets/images/photo-3.svg',
-      'assets/images/photo-4.svg',
-      'assets/images/photo-5.svg',
-      'assets/images/photo-6.svg',
+      'assets/images/memory-01.jpeg',
+      'assets/images/memory-02.jpeg',
+      'assets/images/memory-03.jpeg',
+      'assets/images/memory-04.jpeg',
+      'assets/images/memory-05.jpeg',
+      'assets/images/memory-06.jpeg',
     ]);
   });
 
