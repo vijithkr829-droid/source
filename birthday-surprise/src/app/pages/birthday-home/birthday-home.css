@@ -52,6 +52,7 @@
 .wish-note-title { font-family: var(--serif); font-size: 19px; }
 .wish-note-prompt { color: var(--rose-deep); font-size: 9px; font-weight: 600; white-space: nowrap; }
 .wish-note-message { grid-column: 2 / 4; max-width: 420px; margin-top: 1px; color: var(--muted); font-size: 11px; line-height: 1.75; }
+.wish-note:focus-visible, .birthday-challenge:focus-visible { outline-offset: 3px; }
 .letter-section { background: var(--cream); }
 .letter-heading { margin: 0 auto 31px; text-align: center; }
 .letter-heading-mark { display: block; margin-bottom: 16px; color: var(--gold); font-size: 19px; }
@@ -85,4 +86,17 @@
   .wish-note-title { font-size: 17px; }
   .wish-note-prompt { grid-column: 2; }
   .wish-note-message { grid-column: 2; }
+}
+
+@media (max-width: 380px) {
+  .opening { gap: 24px; padding-top: 35px; }
+  .opening h1 { font-size: clamp(43px, 12vw, 49px); }
+  .opening-intro { margin-top: 16px; }
+  .opening-image { height: 100vw; }
+  .section-pad { padding-right: 16px; padding-left: 16px; }
+  .wish-note { grid-template-columns: 22px minmax(0, 1fr); gap: 7px; padding: 14px 12px; }
+  .wish-note-title { font-size: 16px; }
+  .wish-note-prompt { white-space: normal; }
+  .birthday-challenge { column-gap: 8px; }
+  .challenge-note { font-size: 9px; }
 }

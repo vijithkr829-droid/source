@@ -1,5 +1,4 @@
-import { Component, inject } from '@angular/core';
-import { MusicService } from '../../core/services/music';
+import { Component } from '@angular/core';
 import { birthdayChallenges, birthdayLetter, birthdayMoments, birthdayNotes, memories, recipientName } from '../../shared/models/birthday-content';
 import { LetterCard } from '../../shared/components/letter-card/letter-card';
 import { PhotoGallery } from '../../shared/components/photo-gallery/photo-gallery';
@@ -12,7 +11,6 @@ import { RevealDirective } from '../../shared/directives/reveal.directive';
   styleUrl: './birthday-home.css',
 })
 export class BirthdayHome {
-  private readonly music = inject(MusicService);
   protected readonly recipientName = recipientName;
   protected readonly letter = birthdayLetter;
   protected readonly memories = memories;
@@ -28,10 +26,6 @@ export class BirthdayHome {
 
   protected get challengeProgress(): number {
     return (this.completedMomentCount / this.birthdayChallenges.length) * 100;
-  }
-
-  protected startMusic(): void {
-    this.music.startAfterWelcome();
   }
 
   protected toggleNote(noteId: string): void {
