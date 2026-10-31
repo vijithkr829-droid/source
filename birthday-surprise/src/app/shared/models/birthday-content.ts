@@ -37,12 +37,12 @@ export const birthdayLetter = {
 };
 
 export const memories: readonly PhotoItem[] = [
-  { src: '/assets/images/photo-1.svg', alt: 'Replace with a description of photo one', caption: 'Add photo one' },
-  { src: '/assets/images/photo-2.svg', alt: 'Replace with a description of photo two', caption: 'Add photo two' },
-  { src: '/assets/images/photo-3.svg', alt: 'Replace with a description of photo three', caption: 'Add photo three' },
-  { src: '/assets/images/photo-4.svg', alt: 'Replace with a description of photo four', caption: 'Add photo four' },
-  { src: '/assets/images/photo-5.svg', alt: 'Replace with a description of photo five', caption: 'Add photo five' },
-  { src: '/assets/images/photo-6.svg', alt: 'Replace with a description of photo six', caption: 'Add photo six' },
+  { src: 'assets/images/photo-1.svg', alt: 'Replace with a description of photo one', caption: 'Add photo one' },
+  { src: 'assets/images/photo-2.svg', alt: 'Replace with a description of photo two', caption: 'Add photo two' },
+  { src: 'assets/images/photo-3.svg', alt: 'Replace with a description of photo three', caption: 'Add photo three' },
+  { src: 'assets/images/photo-4.svg', alt: 'Replace with a description of photo four', caption: 'Add photo four' },
+  { src: 'assets/images/photo-5.svg', alt: 'Replace with a description of photo five', caption: 'Add photo five' },
+  { src: 'assets/images/photo-6.svg', alt: 'Replace with a description of photo six', caption: 'Add photo six' },
 ];
 
 export const birthdayMoments: readonly BirthdayMoment[] = [

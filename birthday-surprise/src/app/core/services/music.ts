@@ -1,6 +1,6 @@
 import { Injectable, signal } from '@angular/core';
 
-const MUSIC_SOURCE = '/assets/audio/birthday-music.wav';
+const MUSIC_SOURCE = 'assets/audio/birthday-music.wav';
 const ENABLED_KEY = 'birthday-music-enabled';
 const MUTED_KEY = 'birthday-music-muted';
 
