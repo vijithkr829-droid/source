@@ -11,6 +11,12 @@ npm start
 
 Open the local URL printed by Angular CLI. Create a production build with `npm run build`.
 
+## Publish on GitHub Pages
+
+This is a static Angular site and does not need a separate backend. The repository workflow builds it with the GitHub Pages base path and deploys it whenever files in this app change on `main`.
+
+In the repository settings, open **Pages** and set the build and deployment source to **GitHub Actions**. After the workflow completes, the site will be available at `https://vijithkr829-droid.github.io/source/`. You can also start a deployment from the repository’s **Actions** tab with **Run workflow**.
+
 ## Personalize the gift
 
 - Replace `Veda` and the birthday notes and letter in `src/app/shared/models/birthday-content.ts`.
