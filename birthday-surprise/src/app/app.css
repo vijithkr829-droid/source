@@ -1,8 +1,9 @@
 :host { display: block; min-height: 100vh; }
 
 .site-header {
-  position: relative;
-  z-index: 4;
+  position: sticky;
+  top: 0;
+  z-index: 10;
   width: min(1240px, calc(100% - 88px));
   height: 82px;
   margin: 0 auto;
@@ -10,6 +11,8 @@
   align-items: center;
   justify-content: space-between;
   border-bottom: 1px solid rgba(104, 78, 70, .12);
+  background: rgba(250, 245, 242, .95);
+  backdrop-filter: blur(14px);
 }
 
 .wordmark { display: inline-flex; align-items: center; gap: 11px; font-family: var(--serif); font-size: 15px; font-style: italic; text-decoration: none; }
@@ -27,11 +30,16 @@
 .site-footer { min-height: 78px; display: flex; align-items: center; justify-content: center; gap: 20px; border-top: 1px solid rgba(104, 78, 70, .12); color: var(--muted); font-size: 10px; letter-spacing: .3px; }
 .footer-divider { width: 4px; height: 4px; border-radius: 50%; background: var(--gold); }
 
-@media (max-width: 600px) {
-  .site-header { width: calc(100% - 36px); height: 70px; }
-  .wordmark { gap: 7px; font-size: 12px; }
+@media (max-width: 760px) {
+  .site-header { width: 100%; height: auto; min-height: 98px; flex-wrap: wrap; padding: 10px 18px 7px; }
+  .wordmark { gap: 7px; font-size: 13px; }
   .wordmark-mark { width: 27px; height: 27px; }
-  .site-nav { gap: 12px; }
-  .site-nav a { font-size: 10px; white-space: nowrap; }
-  .site-footer { min-height: 69px; gap: 11px; font-size: 8px; }
+  .site-nav { width: 100%; gap: 5px; margin: 5px -5px 0; overflow-x: auto; overscroll-behavior-x: contain; scrollbar-width: none; }
+  .site-nav::-webkit-scrollbar { display: none; }
+  .site-nav a { min-height: 38px; display: inline-flex; flex: 0 0 auto; align-items: center; padding: 0 10px; border-radius: 20px; font-size: 11px; white-space: nowrap; }
+  .site-nav a:focus-visible { outline-offset: -2px; }
+}
+
+@media (max-width: 600px) {
+  .site-footer { min-height: 69px; flex-wrap: wrap; gap: 8px; padding: 14px; font-size: 9px; }
 }

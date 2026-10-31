@@ -1,4 +1,4 @@
-import { memories } from './shared/models/birthday-content';
+import { birthdayChallenges, birthdayMoments, memories } from './shared/models/birthday-content';
 import { routes } from './app.routes';
 
 describe('Birthday experience content', () => {
@@ -14,7 +14,13 @@ describe('Birthday experience content', () => {
     ]);
   });
 
-  it('defines two pages and a fallback route', () => {
-    expect(routes.map((route) => route.path)).toEqual(['', 'surprise', '**']);
+  it('defines one birthday page and a fallback route', () => {
+    expect(routes.map((route) => route.path)).toEqual(['', '**']);
+  });
+
+  it('provides varied moments and a uniquely identified birthday list', () => {
+    expect(birthdayMoments).toHaveLength(4);
+    expect(birthdayChallenges).toHaveLength(5);
+    expect(new Set(birthdayChallenges.map((challenge) => challenge.id)).size).toBe(birthdayChallenges.length);
   });
 });
