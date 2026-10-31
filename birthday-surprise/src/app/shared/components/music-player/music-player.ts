@@ -8,4 +8,8 @@ import { MusicService } from '../../../core/services/music';
 })
 export class MusicPlayer {
   protected readonly music = inject(MusicService);
+
+  constructor() {
+    this.music.startOnLoad();
+  }
 }

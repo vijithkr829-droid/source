@@ -9,11 +9,11 @@
   <button
     class="music-control"
     type="button"
-    [attr.aria-label]="music.playing() ? 'Pause background music' : 'Play background music'"
+    [attr.aria-label]="music.playing() ? 'Stop birthday song' : 'Play birthday song'"
     [attr.aria-pressed]="music.playing()"
     (click)="music.togglePlayback()"
   >
-    <span aria-hidden="true">{{ music.playing() ? 'Ⅱ' : '▶' }}</span>
+    <span aria-hidden="true">{{ music.playing() ? '■' : '▶' }}</span>
   </button>
   <button
     class="music-control mute-control"
