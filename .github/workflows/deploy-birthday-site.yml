@@ -36,6 +36,9 @@ jobs:
         working-directory: birthday-surprise
         run: npm ci
 
+      - name: Configure GitHub Pages
+        uses: actions/configure-pages@v5
+
       - name: Build website
         working-directory: birthday-surprise
         run: npm run build -- --base-href /source/
