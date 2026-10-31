@@ -10,8 +10,8 @@
     </div>
     <figure class="opening-image" appReveal>
       <img
-        src="/assets/images/photo-1.svg"
-        alt="Replace with a description of the birthday photograph"
+        [src]="memories[0].src"
+        [alt]="memories[0].alt"
         width="800"
         height="980"
         fetchpriority="high"

@@ -31,7 +31,7 @@
   .site-header { width: calc(100% - 36px); height: 70px; }
   .wordmark { gap: 7px; font-size: 12px; }
   .wordmark-mark { width: 27px; height: 27px; }
-  .site-nav { gap: 16px; }
-  .site-nav a { font-size: 9px; }
+  .site-nav { gap: 12px; }
+  .site-nav a { font-size: 10px; white-space: nowrap; }
   .site-footer { min-height: 69px; gap: 11px; font-size: 8px; }
 }

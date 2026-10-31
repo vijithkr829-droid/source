@@ -9,8 +9,8 @@
     </div>
     <div class="chapter-image" aria-label="A favorite memory, saved for another day">
       <img
-        src="/assets/images/photo-2.svg"
-        alt="Replace with a description of photo two"
+        [src]="memories[1].src"
+        [alt]="memories[1].alt"
         width="780"
         height="980"
         (error)="hideMissingImage($event)"
@@ -63,8 +63,8 @@
     </div>
     <div class="final-photo" appReveal>
       <img
-        src="/assets/images/photo-6.svg"
-        alt="A final favorite photograph of Veda"
+        [src]="memories[5].src"
+        [alt]="memories[5].alt"
         width="720"
         height="920"
         loading="lazy"
