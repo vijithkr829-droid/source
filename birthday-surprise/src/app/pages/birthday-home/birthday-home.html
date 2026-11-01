@@ -115,6 +115,26 @@
     </div>
   </section>
 
+  <section class="appreciation-section section-pad" id="things-i-love">
+    <div class="appreciation-heading" appReveal>
+      <p class="eyebrow">A few things worth saying</p>
+      <h2>Things that make<br><em>you, you.</em></h2>
+      <p>There are a hundred more, but these deserve a little space of their own.</p>
+    </div>
+    <div class="appreciation-list">
+      @for (appreciation of birthdayAppreciations; track appreciation.number) {
+        <article class="appreciation-item" appReveal>
+          <span class="appreciation-number">{{ appreciation.number }}</span>
+          <div>
+            <h3>{{ appreciation.title }}</h3>
+            <p>{{ appreciation.detail }}</p>
+          </div>
+          <span class="appreciation-mark" aria-hidden="true">✦</span>
+        </article>
+      }
+    </div>
+  </section>
+
   <section class="letter-section section-pad" id="letter">
     <div class="letter-heading" appReveal>
       <span class="letter-heading-mark" aria-hidden="true">✳</span>
@@ -122,6 +142,26 @@
       <h2>A note, just <em>for you.</em></h2>
     </div>
     <app-letter-card [salutation]="letter.salutation" [paragraphs]="letter.paragraphs" />
+  </section>
+
+  <section class="year-ahead section-pad" id="year-ahead">
+    <div class="year-ahead-heading" appReveal>
+      <p class="eyebrow">A little wish for what’s next</p>
+      <h2>May this year<br>bring you <em>more.</em></h2>
+      <p>More of what feels good, more of what makes you grow, and plenty of lovely surprises along the way.</p>
+      <span class="year-ahead-signoff">With all my love, for the year ahead.</span>
+    </div>
+    <div class="year-ahead-wishes">
+      @for (wish of yearAheadWishes; track wish.title) {
+        <article class="year-ahead-wish" appReveal>
+          <span class="year-ahead-star" aria-hidden="true">✧</span>
+          <div>
+            <h3>{{ wish.title }}</h3>
+            <p>{{ wish.detail }}</p>
+          </div>
+        </article>
+      }
+    </div>
   </section>
 
   <section class="closing-note" appReveal>

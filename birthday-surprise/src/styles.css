@@ -47,19 +47,46 @@ img { display: block; }
 .challenge-note { color: #9c8b83; font-size: 9px; }
 .birthday-challenge:hover .challenge-check, .challenge-picked .challenge-check { border-color: var(--rose-deep); background: var(--rose-deep); color: white; }
 .challenge-picked > span:nth-child(2) { color: #8d7c76; text-decoration: line-through; text-decoration-color: #c89b96; }
+.appreciation-section { display: grid; grid-template-columns: .8fr 1.2fr; align-items: start; gap: 80px; background: #f7f0eb; }
+.appreciation-heading { max-width: 350px; }
+.appreciation-heading h2, .year-ahead-heading h2 { margin: 0; font-family: var(--serif); font-size: clamp(42px, 5vw, 60px); font-weight: 400; letter-spacing: -1.7px; line-height: 1.08; }
+.appreciation-heading h2 em { color: var(--rose-deep); font-weight: 400; }
+.appreciation-heading > p:last-child { max-width: 270px; margin: 17px 0 0; color: var(--muted); font-size: 12px; line-height: 1.8; }
+.appreciation-list { display: grid; grid-template-columns: repeat(2, minmax(0, 1fr)); column-gap: 34px; }
+.appreciation-item { min-height: 145px; display: grid; grid-template-columns: 31px 1fr 16px; align-items: start; gap: 12px; padding: 23px 0 20px; border-top: 1px solid rgba(132, 84, 91, .2); }
+.appreciation-number { padding-top: 4px; color: var(--gold); font-size: 9px; letter-spacing: 1px; }
+.appreciation-item h3, .year-ahead-wish h3 { margin: 0; font-family: var(--serif); font-size: 19px; font-weight: 400; }
+.appreciation-item p, .year-ahead-wish p { margin: 9px 0 0; color: var(--muted); font-size: 11px; line-height: 1.8; }
+.appreciation-mark { padding-top: 4px; color: var(--rose-deep); font-size: 12px; }
 .closing-note { display: flex; flex-direction: column; align-items: center; padding: 76px 24px 82px; background: linear-gradient(135deg, #f3e8e1, #e8d7cf 52%, #f5ebe4); text-align: center; }
 .closing-star { margin-bottom: 14px; color: var(--gold); font-size: 21px; }
 .closing-note > p { margin: 0 0 9px; color: var(--rose-deep); font-size: 9px; font-weight: 700; letter-spacing: 1.8px; text-transform: uppercase; }
 .closing-note h2 { margin: 0; font-family: var(--serif); font-size: clamp(46px, 6vw, 68px); font-weight: 400; letter-spacing: -2px; line-height: 1.1; }
 .closing-note h2 em { color: var(--rose-deep); }
 .closing-caption { margin-top: 17px; color: #786964; font-family: var(--serif); font-size: 14px; font-style: italic; }
+.year-ahead { display: grid; grid-template-columns: .9fr 1.1fr; align-items: center; gap: 80px; background: linear-gradient(135deg, #6e434c, #84535b 58%, #684049); color: #fff9f3; }
+.year-ahead .eyebrow { color: #f0d7b4; }
+.year-ahead-heading h2 { font-size: clamp(43px, 5vw, 62px); }
+.year-ahead-heading h2 em { color: #f0d7b4; font-weight: 400; }
+.year-ahead-heading > p:not(.eyebrow) { max-width: 340px; margin: 18px 0 0; color: rgba(255, 249, 243, .78); font-size: 12px; line-height: 1.9; }
+.year-ahead-signoff { display: block; margin-top: 25px; color: #f0d7b4; font-family: var(--serif); font-size: 14px; font-style: italic; }
+.year-ahead-wishes { border-top: 1px solid rgba(255, 249, 243, .25); }
+.year-ahead-wish { display: grid; grid-template-columns: 30px 1fr; gap: 15px; padding: 21px 0; border-bottom: 1px solid rgba(255, 249, 243, .25); }
+.year-ahead-star { padding-top: 3px; color: #f0d7b4; font-size: 15px; }
+.year-ahead-wish h3 { color: #fff9f3; font-size: 20px; }
+.year-ahead-wish p { max-width: 420px; color: rgba(255, 249, 243, .72); }
 
 @media (max-width: 900px) {
-  .birthday-plan, .little-list { gap: 42px; }
+  .birthday-plan, .little-list, .appreciation-section, .year-ahead { gap: 42px; }
 }
 
 @media (max-width: 600px) {
   .birthday-plan, .little-list { grid-template-columns: 1fr; gap: 29px; }
+  .appreciation-section, .year-ahead { grid-template-columns: 1fr; gap: 28px; }
+  .appreciation-list { column-gap: 20px; }
+  .appreciation-item { min-height: 135px; grid-template-columns: 25px 1fr 12px; gap: 8px; }
+  .appreciation-item h3 { font-size: 17px; }
+  .year-ahead-heading h2 { font-size: 49px; }
   .plan-heading h2, .little-list-heading h2 { font-size: 46px; }
   .plan-heading > p:last-child, .little-list-heading > p:last-child { margin-top: 12px; }
   .plan-timeline { grid-template-columns: 1fr; gap: 0; }
@@ -75,6 +102,8 @@ img { display: block; }
   .birthday-challenge > span:nth-child(2) { font-size: 15px; }
   .challenge-note { grid-column: 2; margin-top: -6px; }
   .closing-note { padding: 59px 20px max(65px, env(safe-area-inset-bottom)); }
+  .appreciation-list { grid-template-columns: 1fr; }
+  .appreciation-item { min-height: auto; }
 }
 
 @media (prefers-reduced-motion: reduce) {

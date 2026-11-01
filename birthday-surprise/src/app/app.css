@@ -71,7 +71,7 @@
   width: 100%;
   grid-column: 1 / -1;
   display: grid;
-  grid-template-columns: repeat(5, minmax(0, 1fr));
+  grid-template-columns: repeat(7, minmax(0, 1fr));
   margin-top: 18px;
   overflow: hidden;
   border-radius: 6px 28px 6px 28px;

@@ -24,6 +24,17 @@ export interface BirthdayChallenge {
   readonly note: string;
 }
 
+export interface BirthdayAppreciation {
+  readonly number: string;
+  readonly title: string;
+  readonly detail: string;
+}
+
+export interface YearAheadWish {
+  readonly title: string;
+  readonly detail: string;
+}
+
 export const recipientName = 'Veda';
 
 export const birthdayLetter = {
@@ -58,6 +69,19 @@ export const birthdayChallenges: readonly BirthdayChallenge[] = [
   { id: 'photo', label: 'Take one just-for-you photo', note: 'future you says thanks' },
   { id: 'people', label: 'Tell your favorite person you love them', note: 'send the text' },
   { id: 'wish', label: 'Make one slightly ridiculous wish', note: 'dream big' },
+];
+
+export const birthdayAppreciations: readonly BirthdayAppreciation[] = [
+  { number: '01', title: 'Your thoughtful heart', detail: 'The care you show in the little things means more than you know.' },
+  { number: '02', title: 'Your unmistakable laugh', detail: 'A little more joy seems to find its way into the room when you laugh.' },
+  { number: '03', title: 'The way you see things', detail: 'You bring your own lovely point of view to every ordinary day.' },
+  { number: '04', title: 'Simply being you', detail: 'No big reason needed. You are wonderful just as you are.' },
+];
+
+export const yearAheadWishes: readonly YearAheadWish[] = [
+  { title: 'More moments that feel like you', detail: 'Room for the people, places, and small joys that make you feel at home.' },
+  { title: 'Brave new beginnings', detail: 'Fresh chances to try, grow, and follow what makes you curious.' },
+  { title: 'Everyday reasons to smile', detail: 'Unexpected good news, familiar songs, and laughter that lasts a little longer.' },
 ];
 
 export const birthdayNotes: readonly BirthdayNote[] = [
