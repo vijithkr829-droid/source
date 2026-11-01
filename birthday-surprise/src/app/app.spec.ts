@@ -1,4 +1,4 @@
-import { birthdayAppreciations, birthdayChallenges, birthdayMoments, birthdayNotes, memories, yearAheadWishes } from './shared/models/birthday-content';
+import { birthdayAppreciations, birthdayChallenges, birthdayMoments, birthdayNotes, heartfeltMessage, memories, yearAheadWishes } from './shared/models/birthday-content';
 import { routes } from './app.routes';
 
 describe('Birthday experience content', () => {
@@ -34,5 +34,11 @@ describe('Birthday experience content', () => {
     expect(yearAheadWishes).toHaveLength(3);
     expect(birthdayAppreciations.every(({ title, detail }) => title.length > 0 && detail.length > 0)).toBe(true);
     expect(yearAheadWishes.every(({ title, detail }) => title.length > 0 && detail.length > 0)).toBe(true);
+  });
+
+  it('includes a heartfelt personal message with a gentle closing', () => {
+    expect(heartfeltMessage.paragraphs).toHaveLength(2);
+    expect(heartfeltMessage.paragraphs[0]).toContain('I miss you, more than I can explain.');
+    expect(heartfeltMessage.paragraphs[1]).toContain('grateful for the moments we shared');
   });
 });

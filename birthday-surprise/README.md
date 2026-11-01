@@ -1,6 +1,6 @@
 # A Little Birthday Surprise
 
-A one-page Angular 21 birthday experience for Veda. The page brings together top section navigation, a photo collage, a flexible day-of timeline, ten interactive birthday notes, a tappable birthday bucket list, personal appreciations, wishes for the year ahead, and one personal letter. Its background music player lives in the root shell.
+A one-page Angular 21 birthday experience for Veda. The page brings together top section navigation, a photo collage, a flexible day-of timeline, ten interactive birthday notes, a tappable birthday bucket list, personal appreciations, a heartfelt message, wishes for the year ahead, and one personal letter. Its background music player lives in the root shell.
 
 ## Run locally
 

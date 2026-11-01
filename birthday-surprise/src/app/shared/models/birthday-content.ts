@@ -47,6 +47,13 @@ export const birthdayLetter = {
   ],
 };
 
+export const heartfeltMessage = {
+  paragraphs: [
+    'I don’t know if you ever miss me the way I miss you, but honestly, I still do. I miss our conversations, your presence, the little things we used to share, and even the smallest moments. I know things aren’t the same anymore, but a part of me still wishes I could go back and relive those moments with you. I miss you, more than I can explain. ❤️',
+    'No matter where life takes us, I’ll always be grateful for the moments we shared.',
+  ],
+};
+
 export const memories: readonly PhotoItem[] = [
   { src: 'assets/images/memory-01.jpeg', alt: 'Veda with a yellow flower tucked behind her ear', caption: 'A little sunshine' },
   { src: 'assets/images/memory-02.jpeg', alt: 'Veda smiling among bright bougainvillea flowers', caption: 'In a garden of blooms' },

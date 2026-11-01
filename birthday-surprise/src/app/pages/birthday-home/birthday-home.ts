@@ -1,5 +1,5 @@
 import { Component } from '@angular/core';
-import { birthdayAppreciations, birthdayChallenges, birthdayLetter, birthdayMoments, birthdayNotes, memories, recipientName, yearAheadWishes } from '../../shared/models/birthday-content';
+import { birthdayAppreciations, birthdayChallenges, birthdayLetter, birthdayMoments, birthdayNotes, heartfeltMessage, memories, recipientName, yearAheadWishes } from '../../shared/models/birthday-content';
 import { LetterCard } from '../../shared/components/letter-card/letter-card';
 import { PhotoGallery } from '../../shared/components/photo-gallery/photo-gallery';
 import { RevealDirective } from '../../shared/directives/reveal.directive';
@@ -19,6 +19,7 @@ export class BirthdayHome {
   protected readonly birthdayChallenges = birthdayChallenges;
   protected readonly birthdayAppreciations = birthdayAppreciations;
   protected readonly yearAheadWishes = yearAheadWishes;
+  protected readonly heartfeltMessage = heartfeltMessage;
   protected activeNoteId: string | null = null;
   protected pickedChallengeIds: string[] = [];
 

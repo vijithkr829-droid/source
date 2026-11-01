@@ -58,6 +58,15 @@ img { display: block; }
 .appreciation-item h3, .year-ahead-wish h3 { margin: 0; font-family: var(--serif); font-size: 19px; font-weight: 400; }
 .appreciation-item p, .year-ahead-wish p { margin: 9px 0 0; color: var(--muted); font-size: 11px; line-height: 1.8; }
 .appreciation-mark { padding-top: 4px; color: var(--rose-deep); font-size: 12px; }
+.heartfelt-section { display: grid; place-items: center; background: var(--cream); }
+.heartfelt-card { position: relative; width: min(760px, 100%); padding: clamp(30px, 6vw, 64px); border: 1px solid rgba(157, 117, 102, .2); background: linear-gradient(145deg, #fffdfa, #fbf5f1); text-align: center; }
+.heartfelt-mark { display: grid; width: 42px; height: 42px; place-items: center; margin: 0 auto 20px; border: 1px solid #e8d7ce; border-radius: 50%; color: var(--rose-deep); font-size: 19px; }
+.heartfelt-card .eyebrow { margin-bottom: 10px; }
+.heartfelt-card h2 { margin: 0; font-family: var(--serif); font-size: clamp(39px, 5vw, 56px); font-weight: 400; letter-spacing: -1.5px; line-height: 1.1; }
+.heartfelt-card h2 em { color: var(--rose-deep); font-weight: 400; }
+.heartfelt-copy { max-width: 570px; margin: 25px auto 0; }
+.heartfelt-copy p { margin: 0; color: var(--muted); font-size: 13px; line-height: 2; }
+.heartfelt-copy p + p { margin-top: 17px; color: #806f69; font-family: var(--serif); font-size: 15px; font-style: italic; }
 .closing-note { display: flex; flex-direction: column; align-items: center; padding: 76px 24px 82px; background: linear-gradient(135deg, #f3e8e1, #e8d7cf 52%, #f5ebe4); text-align: center; }
 .closing-star { margin-bottom: 14px; color: var(--gold); font-size: 21px; }
 .closing-note > p { margin: 0 0 9px; color: var(--rose-deep); font-size: 9px; font-weight: 700; letter-spacing: 1.8px; text-transform: uppercase; }
@@ -86,6 +95,9 @@ img { display: block; }
   .appreciation-list { column-gap: 20px; }
   .appreciation-item { min-height: 135px; grid-template-columns: 25px 1fr 12px; gap: 8px; }
   .appreciation-item h3 { font-size: 17px; }
+  .heartfelt-card { padding: 35px 24px; }
+  .heartfelt-copy p { font-size: 12px; line-height: 1.9; }
+  .heartfelt-copy p + p { font-size: 14px; }
   .year-ahead-heading h2 { font-size: 49px; }
   .plan-heading h2, .little-list-heading h2 { font-size: 46px; }
   .plan-heading > p:last-child, .little-list-heading > p:last-child { margin-top: 12px; }
