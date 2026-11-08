@@ -35,6 +35,12 @@ export interface YearAheadWish {
   readonly detail: string;
 }
 
+export interface LittleHighlight {
+  readonly title: string;
+  readonly detail: string;
+  readonly note: string;
+}
+
 export const recipientName = 'Veda';
 
 export const birthdayLetter = {
@@ -55,12 +61,12 @@ export const heartfeltMessage = {
 };
 
 export const memories: readonly PhotoItem[] = [
-  { src: 'assets/images/memory-01.jpeg', alt: 'Veda with a yellow flower tucked behind her ear', caption: 'A little sunshine' },
-  { src: 'assets/images/memory-02.jpeg', alt: 'Veda smiling among bright bougainvillea flowers', caption: 'In a garden of blooms' },
-  { src: 'assets/images/memory-03.jpeg', alt: 'Veda exploring a historic temple courtyard', caption: 'A day among old stones' },
-  { src: 'assets/images/memory-04.jpeg', alt: 'Veda sitting beneath a temple arch and looking toward the courtyard', caption: 'A quiet temple moment' },
-  { src: 'assets/images/memory-05.jpeg', alt: 'Veda beneath a tree in a historic temple courtyard', caption: 'Under the temple trees' },
-  { src: 'assets/images/memory-06.jpeg', alt: 'Veda among flowering bougainvillea in warm sunlight', caption: 'Wrapped in bougainvillea' },
+  { src: 'assets/images/memory-01.jpeg', alt: 'Veda with a yellow flower tucked behind her ear', caption: 'A little sunshine, a little you' },
+  { src: 'assets/images/memory-02.jpeg', alt: 'Veda smiling among bright bougainvillea flowers', caption: 'The smile that makes everything brighter' },
+  { src: 'assets/images/memory-03.jpeg', alt: 'Veda exploring a historic temple courtyard', caption: 'A quiet memory, a beautiful chapter' },
+  { src: 'assets/images/memory-04.jpeg', alt: 'Veda sitting beneath a temple arch and looking toward the courtyard', caption: 'One of those favorite little moments' },
+  { src: 'assets/images/memory-05.jpeg', alt: 'Veda beneath a tree in a historic temple courtyard', caption: 'Soft light and your lovely glow' },
+  { src: 'assets/images/memory-06.jpeg', alt: 'Veda among flowering bougainvillea in warm sunlight', caption: 'Wrapped in warmth, love, and laughter' },
 ];
 
 export const birthdayMoments: readonly BirthdayMoment[] = [
@@ -89,6 +95,12 @@ export const yearAheadWishes: readonly YearAheadWish[] = [
   { title: 'More moments that feel like you', detail: 'Room for the people, places, and small joys that make you feel at home.' },
   { title: 'Brave new beginnings', detail: 'Fresh chances to try, grow, and follow what makes you curious.' },
   { title: 'Everyday reasons to smile', detail: 'Unexpected good news, familiar songs, and laughter that lasts a little longer.' },
+];
+
+export const littleHighlights: readonly LittleHighlight[] = [
+  { title: 'Your laugh', detail: 'The kind that makes a room feel lighter without even trying.', note: 'always a mood-lifter' },
+  { title: 'Your calm', detail: 'You bring a softness to hard days that people are lucky to feel.', note: 'quietly comforting' },
+  { title: 'Your glow', detail: 'The way you carry yourself turns ordinary moments into something memorable.', note: 'beautifully yours' },
 ];
 
 export const birthdayNotes: readonly BirthdayNote[] = [

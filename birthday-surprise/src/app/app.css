@@ -218,6 +218,37 @@
     margin-top: 6px;
     border-radius: 4px 20px 4px 20px;
   }
+}
+
+@media (max-width: 420px) {
+  .site-header {
+    padding-inline: 14px;
+  }
+
+  .site-nav {
+    grid-template-columns: 1fr;
+    border-radius: 10px 18px 10px 18px;
+  }
+
+  .site-nav a {
+    min-height: 48px;
+    font-size: 10px;
+  }
+
+  .site-nav a + a {
+    border-top: 1px solid rgba(255, 249, 243, 0.12);
+    border-left: 0;
+  }
+
+  .site-footer {
+    flex-direction: column;
+    gap: 10px;
+    padding: 18px 20px 28px;
+  }
+
+  .footer-divider {
+    display: none;
+  }
 
   .site-nav a {
     min-height: 48px;
