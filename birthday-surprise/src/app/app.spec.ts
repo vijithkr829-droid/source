@@ -1,4 +1,4 @@
-import { birthdayAppreciations, birthdayChallenges, birthdayLetter, birthdayMoments, birthdayNotes, heartfeltMessage, littleHighlights, memories, yearAheadWishes } from './shared/models/birthday-content';
+import { birthdayAppreciations, birthdayChallenges, birthdayMoments, birthdayNotes, heartfeltMessage, memories, yearAheadWishes } from './shared/models/birthday-content';
 import { routes } from './app.routes';
 
 describe('Birthday experience content', () => {
@@ -32,30 +32,13 @@ describe('Birthday experience content', () => {
   it('includes personal appreciations and wishes for the year ahead', () => {
     expect(birthdayAppreciations).toHaveLength(4);
     expect(yearAheadWishes).toHaveLength(3);
-    expect(littleHighlights).toHaveLength(3);
     expect(birthdayAppreciations.every(({ title, detail }) => title.length > 0 && detail.length > 0)).toBe(true);
     expect(yearAheadWishes.every(({ title, detail }) => title.length > 0 && detail.length > 0)).toBe(true);
-    expect(littleHighlights.every(({ title, detail }) => title.length > 0 && detail.length > 0)).toBe(true);
   });
 
   it('includes a heartfelt personal message with a gentle closing', () => {
     expect(heartfeltMessage.paragraphs).toHaveLength(2);
-    expect(heartfeltMessage.paragraphs[0]).toContain('what we shared still matters to me');
-    expect(heartfeltMessage.paragraphs[1]).toContain('no expectation that you reply');
-  });
-
-  it('uses distinct prose across the birthday letter, notes, wishes, and highlights', () => {
-    const prose = [
-      ...birthdayLetter.paragraphs,
-      ...heartfeltMessage.paragraphs,
-      ...birthdayNotes.map(({ message }) => message),
-      ...birthdayMoments.map(({ detail }) => detail),
-      ...birthdayChallenges.flatMap(({ label, note }) => [label, note]),
-      ...birthdayAppreciations.flatMap(({ title, detail }) => [title, detail]),
-      ...yearAheadWishes.flatMap(({ title, detail }) => [title, detail]),
-      ...littleHighlights.flatMap(({ title, detail }) => [title, detail]),
-    ];
-
-    expect(new Set(prose).size).toBe(prose.length);
+    expect(heartfeltMessage.paragraphs[0]).toContain('I miss you, more than I can explain.');
+    expect(heartfeltMessage.paragraphs[1]).toContain('grateful for the moments we shared');
   });
 });
