@@ -132,6 +132,23 @@
     </div>
   </section>
 
+  <section class="meaning-section section-pad" id="what-you-mean">
+    <div class="meaning-heading" appReveal>
+      <p class="eyebrow">Some things stay with me</p>
+      <h2>What you mean<br><em>to me.</em></h2>
+      <p>There is more to you in my life than the fact that I miss you.</p>
+    </div>
+    <div class="meaning-list">
+      @for (meaning of personalMeaning; track meaning.title) {
+        <article class="meaning-card" appReveal>
+          <span class="meaning-number" aria-hidden="true">✦</span>
+          <h3>{{ meaning.title }}</h3>
+          <p>{{ meaning.detail }}</p>
+        </article>
+      }
+    </div>
+  </section>
+
   <section class="heartfelt-section section-pad" id="from-my-heart">
     <div class="heartfelt-card" appReveal>
       <span class="heartfelt-mark" aria-hidden="true">♡</span>

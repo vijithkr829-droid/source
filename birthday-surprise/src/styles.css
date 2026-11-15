@@ -58,6 +58,16 @@ img { display: block; }
 .appreciation-item h3, .year-ahead-wish h3 { margin: 0; font-family: var(--serif); font-size: 19px; font-weight: 400; }
 .appreciation-item p, .year-ahead-wish p { margin: 9px 0 0; color: var(--muted); font-size: 11px; line-height: 1.8; }
 .appreciation-mark { padding-top: 4px; color: var(--rose-deep); font-size: 12px; }
+.meaning-section { display: grid; grid-template-columns: .8fr 1.2fr; align-items: start; gap: 80px; background: #fff9f5; }
+.meaning-heading { max-width: 350px; }
+.meaning-heading h2 { margin: 0; font-family: var(--serif); font-size: clamp(42px, 5vw, 60px); font-weight: 400; letter-spacing: -1.7px; line-height: 1.08; }
+.meaning-heading h2 em { color: var(--rose-deep); font-weight: 400; }
+.meaning-heading > p:last-child { max-width: 280px; margin: 17px 0 0; color: var(--muted); font-size: 12px; line-height: 1.8; }
+.meaning-list { display: grid; gap: 22px; }
+.meaning-card { display: grid; grid-template-columns: 24px 1fr; gap: 8px 13px; padding: 0 0 21px; border-bottom: 1px solid rgba(132, 84, 91, .2); }
+.meaning-number { grid-row: span 2; padding-top: 4px; color: var(--gold); font-size: 12px; }
+.meaning-card h3 { margin: 0; font-family: var(--serif); font-size: 21px; font-weight: 400; }
+.meaning-card p { max-width: 540px; margin: 0; color: var(--muted); font-size: 12px; line-height: 1.9; }
 .heartfelt-section { display: grid; place-items: center; background: var(--cream); }
 .heartfelt-card { position: relative; width: min(760px, 100%); padding: clamp(30px, 6vw, 64px); border: 1px solid rgba(157, 117, 102, .2); background: linear-gradient(145deg, #fffdfa, #fbf5f1); text-align: center; }
 .heartfelt-mark { display: grid; width: 42px; height: 42px; place-items: center; margin: 0 auto 20px; border: 1px solid #e8d7ce; border-radius: 50%; color: var(--rose-deep); font-size: 19px; }
@@ -79,12 +89,12 @@ img { display: block; }
 .year-ahead-wish p { max-width: 420px; color: rgba(255, 249, 243, .72); }
 
 @media (max-width: 900px) {
-  .birthday-plan, .little-list, .appreciation-section, .year-ahead { gap: 42px; }
+  .birthday-plan, .little-list, .appreciation-section, .meaning-section, .year-ahead { gap: 42px; }
 }
 
 @media (max-width: 600px) {
   .birthday-plan, .little-list { grid-template-columns: 1fr; gap: 29px; }
-  .appreciation-section, .year-ahead { grid-template-columns: 1fr; gap: 28px; }
+  .appreciation-section, .meaning-section, .year-ahead { grid-template-columns: 1fr; gap: 28px; }
   .appreciation-list { column-gap: 20px; }
   .appreciation-item { min-height: 135px; grid-template-columns: 25px 1fr 12px; gap: 8px; }
   .appreciation-item h3 { font-size: 17px; }

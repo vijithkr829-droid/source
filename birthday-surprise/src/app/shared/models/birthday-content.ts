@@ -35,6 +35,11 @@ export interface YearAheadWish {
   readonly detail: string;
 }
 
+export interface PersonalMeaning {
+  readonly title: string;
+  readonly detail: string;
+}
+
 export const recipientName = 'Veda';
 
 export const birthdayLetter = {
@@ -83,6 +88,21 @@ export const birthdayAppreciations: readonly BirthdayAppreciation[] = [
   { number: '02', title: 'You think for yourself', detail: 'Your point of view is unmistakably yours, even in the smallest choices.' },
   { number: '03', title: 'You keep showing up', detail: 'There is a quiet strength in the way you meet difficult days.' },
   { number: '04', title: 'You bring your own humor', detail: 'You can make an ordinary conversation feel like one people want to keep having.' },
+];
+
+export const personalMeaning: readonly PersonalMeaning[] = [
+  {
+    title: 'You made the ordinary matter',
+    detail: 'Knowing you made me notice how much connection lives in small things: an honest conversation, a shared laugh, or being understood without having to explain everything.',
+  },
+  {
+    title: 'You helped me grow',
+    detail: 'You have been part of how I learned to care more openly, listen more closely, and appreciate the people who make a difference in my life.',
+  },
+  {
+    title: 'You are part of my story',
+    detail: 'Life may change the shape of a relationship, but it cannot make the time we shared meaningless. I will always be glad our paths crossed.',
+  },
 ];
 
 export const yearAheadWishes: readonly YearAheadWish[] = [

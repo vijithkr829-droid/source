@@ -1,4 +1,4 @@
-import { birthdayAppreciations, birthdayChallenges, birthdayLetter, birthdayMoments, birthdayNotes, heartfeltMessage, memories, yearAheadWishes } from './shared/models/birthday-content';
+import { birthdayAppreciations, birthdayChallenges, birthdayLetter, birthdayMoments, birthdayNotes, heartfeltMessage, memories, personalMeaning, yearAheadWishes } from './shared/models/birthday-content';
 import { routes } from './app.routes';
 
 describe('Birthday experience content', () => {
@@ -40,6 +40,7 @@ describe('Birthday experience content', () => {
       ...birthdayChallenges.map((challenge) => challenge.label),
       ...birthdayChallenges.map((challenge) => challenge.note),
       ...birthdayAppreciations.map((appreciation) => appreciation.detail),
+      ...personalMeaning.map((meaning) => meaning.detail),
       ...yearAheadWishes.map((wish) => wish.detail),
     ];
 
@@ -48,6 +49,7 @@ describe('Birthday experience content', () => {
 
   it('includes personal appreciations and wishes for the year ahead', () => {
     expect(birthdayAppreciations).toHaveLength(4);
+    expect(personalMeaning).toHaveLength(3);
     expect(yearAheadWishes).toHaveLength(3);
     expect(birthdayAppreciations.every(({ title, detail }) => title.length > 0 && detail.length > 0)).toBe(true);
     expect(yearAheadWishes.every(({ title, detail }) => title.length > 0 && detail.length > 0)).toBe(true);
