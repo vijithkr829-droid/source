@@ -23,6 +23,7 @@ export class BirthdayHome {
   protected readonly heartfeltMessage = heartfeltMessage;
   protected activeNoteId: string | null = null;
   protected pickedChallengeIds: string[] = [];
+  protected birthdaySurpriseOpen = false;
 
   protected get completedMomentCount(): number {
     return this.pickedChallengeIds.length;
@@ -44,6 +45,10 @@ export class BirthdayHome {
     this.pickedChallengeIds = this.isChallengePicked(challengeId)
       ? this.pickedChallengeIds.filter((id) => id !== challengeId)
       : [...this.pickedChallengeIds, challengeId];
+  }
+
+  protected toggleBirthdaySurprise(): void {
+    this.birthdaySurpriseOpen = !this.birthdaySurpriseOpen;
   }
 
   protected hideMissingImage(event: Event): void {
