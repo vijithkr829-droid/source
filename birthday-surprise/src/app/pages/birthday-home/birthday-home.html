@@ -201,4 +201,55 @@
     </div>
   </section>
 
+  <section class="cake-section section-pad" id="birthday-cake">
+    <div class="cake-card" appReveal>
+      <p class="eyebrow">A birthday tradition</p>
+      <h2>Make a <em>wish.</em></h2>
+      <p class="cake-instruction">Take a breath, think of something wonderful, then tap the candle.</p>
+      <div class="cake-scene">
+        @if (hasMadeWish) {
+          <div class="cake-confetti" aria-hidden="true">
+            @for (piece of confettiPieces; track $index) {
+              <span
+                [style.--confetti-x]="piece.x + 'px'"
+                [style.--confetti-y]="piece.y + 'px'"
+                [style.--confetti-rotation]="piece.rotation + 'deg'"
+                [style.--confetti-delay]="piece.delay + 'ms'"
+              ></span>
+            }
+          </div>
+        }
+        <div class="cake-candle-wrap">
+          <button
+            class="cake-candle"
+            [class.cake-candle-blown]="hasMadeWish"
+            type="button"
+            [attr.aria-label]="hasMadeWish ? 'Birthday candle blown out' : 'Blow out the birthday candle and make a wish'"
+            [disabled]="hasMadeWish"
+            (click)="makeBirthdayWish()"
+          >
+            @if (!hasMadeWish) {
+              <span class="candle-flame" aria-hidden="true"></span>
+            }
+            <span class="candle-wick" aria-hidden="true"></span>
+            <span class="candle-stick" aria-hidden="true"></span>
+          </button>
+        </div>
+        <div class="birthday-cake" aria-hidden="true">
+          <span class="cake-top"></span>
+          <span class="cake-frosting"></span>
+          <span class="cake-sprinkle sprinkle-one"></span>
+          <span class="cake-sprinkle sprinkle-two"></span>
+          <span class="cake-sprinkle sprinkle-three"></span>
+          <span class="cake-sprinkle sprinkle-four"></span>
+        </div>
+        <div class="cake-plate" aria-hidden="true"></div>
+      </div>
+      <p class="cake-wish" role="status" [hidden]="!hasMadeWish">
+        Wishing you a year full of good things, lovely surprises, and reasons to smile.
+      </p>
+      <p class="cake-hint" [hidden]="hasMadeWish">Your wish is yours to keep.</p>
+    </div>
+  </section>
+
 </div>
