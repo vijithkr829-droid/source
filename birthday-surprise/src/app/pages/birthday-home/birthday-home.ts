@@ -11,12 +11,6 @@ import { RevealDirective } from '../../shared/directives/reveal.directive';
   styleUrl: './birthday-home.css',
 })
 export class BirthdayHome {
-  protected readonly confettiPieces = Array.from({ length: 28 }, (_, index) => ({
-    x: (index % 7 - 3) * 34,
-    y: -58 - ((index * 29) % 150),
-    rotation: index * 83,
-    delay: (index % 7) * 18,
-  }));
   protected readonly recipientName = recipientName;
   protected readonly letter = birthdayLetter;
   protected readonly memories = memories;
@@ -29,7 +23,6 @@ export class BirthdayHome {
   protected readonly heartfeltMessage = heartfeltMessage;
   protected activeNoteId: string | null = null;
   protected pickedChallengeIds: string[] = [];
-  protected hasMadeWish = false;
 
   protected get completedMomentCount(): number {
     return this.pickedChallengeIds.length;
@@ -51,10 +44,6 @@ export class BirthdayHome {
     this.pickedChallengeIds = this.isChallengePicked(challengeId)
       ? this.pickedChallengeIds.filter((id) => id !== challengeId)
       : [...this.pickedChallengeIds, challengeId];
-  }
-
-  protected makeBirthdayWish(): void {
-    this.hasMadeWish = true;
   }
 
   protected hideMissingImage(event: Event): void {
