@@ -40,16 +40,17 @@ export const recipientName = 'Veda';
 export const birthdayLetter = {
   salutation: `Happy Birthday, ${recipientName}.`,
   paragraphs: [
-    'I wanted your birthday to have something you could keep, not just another message that disappears into a chat. So I gathered the photos, music, and words on this page with you in mind.',
-    'There is no sequence to follow and nothing you need to do here. I just hope opening it gives you a quiet moment to feel celebrated.',
-    'Have a lovely birthday, Veda. I am glad today gives me a reason to say that properly.',
+    'Happy birthday, Veda. I have been thinking about what to write, and the truth is that I miss you more than I usually know how to say. I miss talking with you about nothing in particular, hearing what you thought about the little things, and having you as part of my everyday life.',
+    'Some days, I catch myself wishing we could go back—not to pretend nothing happened, but to have another chance to find our way toward each other. I miss your presence, your voice, and the familiar comfort of being able to share a moment with you. If I could have one birthday wish for myself, it would be the chance to have you close again.',
+    'I know that is only my wish, and I respect that your feelings and choices are your own. You do not owe me a response or a promise. I wanted to be honest with you, especially today, rather than hide how much you still mean to me.',
+    'I made this page because an ordinary birthday message felt too small for everything I wanted to say. The photos, music, and words are here as a little piece of care from me to you. Whatever this day looks like, I hope it brings you warmth, and I hope you know I am wishing you well with all my heart.',
   ],
 };
 
 export const heartfeltMessage = {
   paragraphs: [
-    'I still miss you, especially in the small in-between moments: when I hear a song you would have had an opinion about, or see something I would once have sent you.',
-    'I know we have our own lives now. I wanted to be honest about what I feel without asking you to do anything with it.',
+    'I am grateful for what we shared: the conversations that ran late, the jokes that only made sense to us, and the ordinary days that became memories without either of us noticing.',
+    'Those moments are part of my story now. I can value them for what they were and still hope life is kind to you, wherever it takes you.',
   ],
 };
 

@@ -55,7 +55,14 @@ describe('Birthday experience content', () => {
 
   it('includes a heartfelt personal message with a gentle closing', () => {
     expect(heartfeltMessage.paragraphs).toHaveLength(2);
-    expect(heartfeltMessage.paragraphs[0]).toContain('I still miss you, especially');
-    expect(heartfeltMessage.paragraphs[1]).toContain('without asking you to do anything with it');
+    expect(heartfeltMessage.paragraphs[0]).toContain('I am grateful for what we shared');
+    expect(heartfeltMessage.paragraphs[1]).toContain('part of my story now');
+  });
+
+  it('makes the birthday letter personal, honest, and free of pressure', () => {
+    expect(birthdayLetter.paragraphs.length).toBeGreaterThanOrEqual(4);
+    expect(birthdayLetter.paragraphs.join(' ')).toContain('I miss you');
+    expect(birthdayLetter.paragraphs.join(' ')).toContain('I respect that your feelings and choices are your own');
+    expect(birthdayLetter.paragraphs.join(' ')).toContain('You do not owe me a response or a promise');
   });
 });
