@@ -84,13 +84,14 @@ img { display: block; }
 .year-ahead-star { padding-top: 3px; color: #f0d7b4; font-size: 15px; }
 .year-ahead-wish h3 { color: #fff9f3; font-size: 20px; }
 .year-ahead-wish p { max-width: 420px; color: rgba(255, 249, 243, .72); }
-.home-page .little-highlights-heading { max-width: 600px; margin: 0 auto 38px; text-align: center; }
-.home-page .little-highlights-heading > p:last-child { max-width: 430px; margin: 16px auto 0; color: var(--muted); font-size: 12px; line-height: 1.8; }
-.home-page .highlight-grid { display: grid; grid-template-columns: repeat(3, minmax(0, 1fr)); gap: 18px; }
-.home-page .highlight-card { min-height: 220px; padding: 24px 22px; border: 1px solid rgba(163,119,101,.18); border-top: 2px solid var(--rose-deep); background: rgba(255,255,255,.62); }
-.home-page .highlight-number { display: block; margin-bottom: 30px; color: var(--gold); font-size: 10px; font-weight: 600; letter-spacing: 1px; }
-.home-page .highlight-card h3 { margin: 0 0 11px; font-family: var(--serif); font-size: clamp(22px, 2.2vw, 28px); font-weight: 400; letter-spacing: -.6px; line-height: 1.2; }
-.home-page .highlight-card p { margin: 0; color: var(--muted); font-size: 12px; line-height: 1.8; }
+.home-page .little-highlights { background: #f3eae4; }
+.home-page .little-highlights-heading { max-width: 700px; margin: 0 auto 42px; text-align: center; }
+.home-page .little-highlights-heading > p:last-child { max-width: 420px; margin: 16px auto 0; color: var(--muted); font-size: 12px; line-height: 1.8; }
+.home-page .highlight-grid { max-width: 1020px; display: grid; grid-template-columns: repeat(3, minmax(0, 1fr)); margin: 0 auto; border-top: 1px solid rgba(132,84,91,.25); border-bottom: 1px solid rgba(132,84,91,.25); }
+.home-page .highlight-item { min-height: 190px; padding: 26px 24px; }
+.home-page .highlight-item + .highlight-item { border-left: 1px solid rgba(132,84,91,.2); }
+.home-page .highlight-item h3 { margin: 0 0 13px; font-family: var(--serif); font-size: clamp(21px, 2vw, 27px); font-weight: 400; line-height: 1.25; }
+.home-page .highlight-item p { margin: 0; color: var(--muted); font-size: 12px; line-height: 1.85; }
 .birthday-surprise { background: linear-gradient(135deg, #f7f0eb, #fff9f5 55%, #f1e4dc); }
 .surprise-card { position: relative; max-width: 720px; margin: 0 auto; padding: 48px 52px; border: 1px solid rgba(163,119,101,.26); background: rgba(255,253,250,.8); text-align: center; box-shadow: 0 18px 50px rgba(96,71,65,.06); }
 .surprise-card::before { position: absolute; inset: 9px; border: 1px solid rgba(163,119,101,.12); content: ""; pointer-events: none; }
@@ -111,6 +112,11 @@ img { display: block; }
 }
 
 @media (max-width: 600px) {
+  .home-page .little-highlights-heading { margin-bottom: 27px; }
+  .home-page .highlight-grid { grid-template-columns: 1fr; }
+  .home-page .highlight-item { min-height: 0; padding: 20px 4px; }
+  .home-page .highlight-item + .highlight-item { border-top: 1px solid rgba(132,84,91,.2); border-left: 0; }
+  .home-page .highlight-item h3 { font-size: 24px; }
   .birthday-plan, .little-list { grid-template-columns: 1fr; gap: 29px; }
   .appreciation-section, .year-ahead { grid-template-columns: 1fr; gap: 28px; }
   .appreciation-list { column-gap: 20px; }

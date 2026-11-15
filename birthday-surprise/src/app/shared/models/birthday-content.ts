@@ -45,72 +45,71 @@ export const recipientName = 'Veda';
 export const birthdayLetter = {
   salutation: `Happy Birthday, ${recipientName}.`,
   paragraphs: [
-    'Some people make life feel less hurried just by being in it. I hope today gives back a little of the care and patience you bring to the people around you.',
-    'May this birthday bring you one new story worth retelling: an unplanned meal, a photo you did not pose for, or a small detour that turns out just right.',
-    'I hope you keep making room for the things that spark your curiosity—the questions, ideas, and little discoveries you cannot wait to share.',
-    'When you look back on today, I hope there is one moment you want to keep exactly as it was. I am glad I get to celebrate you. Happy birthday, Veda.',
+    'I hope today frees you from being the one who remembers everything. Let somebody else choose the time, the place, and the small details for a change.',
+    'When someone says something kind about you, try not to talk them out of it. Let the words stay for a moment.',
+    'I hope this birthday feels like yours from the first moment to the last. Happy birthday, Veda.',
   ],
 };
 
 export const heartfeltMessage = {
   paragraphs: [
-    'I don’t know if you ever miss me the way I miss you, but honestly, I still do. I miss our conversations, your presence, the little things we used to share, and even the smallest moments. I know things aren’t the same anymore, but a part of me still wishes I could go back and relive those moments with you. I miss you, more than I can explain. ❤️',
-    'No matter where life takes us, I’ll always be grateful for the moments we shared.',
+    'I miss you most in ordinary moments: when something happens and you are still the person I want to tell, or when an old joke comes back to me. I know life has changed, and I do not expect anything from you today. I only wanted to be honest that what we shared still matters to me.',
+    'I do not want that feeling to take over your birthday. I am wishing you a happy day, with no expectation that you reply—this is simply something I wanted you to know.',
   ],
 };
 
 export const memories: readonly PhotoItem[] = [
-  { src: 'assets/images/memory-01.jpeg', alt: 'Veda with a yellow flower tucked behind her ear', caption: 'A little sunshine, a little you' },
-  { src: 'assets/images/memory-02.jpeg', alt: 'Veda smiling among bright bougainvillea flowers', caption: 'The smile that makes everything brighter' },
-  { src: 'assets/images/memory-03.jpeg', alt: 'Veda exploring a historic temple courtyard', caption: 'A quiet memory, a beautiful chapter' },
-  { src: 'assets/images/memory-04.jpeg', alt: 'Veda sitting beneath a temple arch and looking toward the courtyard', caption: 'One of those favorite little moments' },
-  { src: 'assets/images/memory-05.jpeg', alt: 'Veda beneath a tree in a historic temple courtyard', caption: 'Soft light and your lovely glow' },
-  { src: 'assets/images/memory-06.jpeg', alt: 'Veda among flowering bougainvillea in warm sunlight', caption: 'Wrapped in warmth, love, and laughter' },
+  { src: 'assets/images/memory-01.jpeg', alt: 'Veda with a yellow flower tucked behind her ear', caption: 'A flower, tucked in just so' },
+  { src: 'assets/images/memory-02.jpeg', alt: 'Veda smiling among bright bougainvillea flowers', caption: 'Bougainvillea in full bloom' },
+  { src: 'assets/images/memory-03.jpeg', alt: 'Veda exploring a historic temple courtyard', caption: 'A walk through the old courtyard' },
+  { src: 'assets/images/memory-04.jpeg', alt: 'Veda sitting beneath a temple arch and looking toward the courtyard', caption: 'A pause beneath the stone arch' },
+  { src: 'assets/images/memory-05.jpeg', alt: 'Veda beneath a tree in a historic temple courtyard', caption: 'A little shade beneath the trees' },
+  { src: 'assets/images/memory-06.jpeg', alt: 'Veda among flowering bougainvillea in warm sunlight', caption: 'The afternoon the flowers were everywhere' },
 ];
 
 export const birthdayMoments: readonly BirthdayMoment[] = [
-  { time: 'WHEN YOU WAKE', icon: '☼', title: 'Ease into the day', detail: 'A favorite drink, a good song, and absolutely no rushing.' },
-  { time: 'WHEN YOU’RE HUNGRY', icon: '♡', title: 'Eat something delicious', detail: 'Birthday rules say the treat does not need to be shared.' },
-  { time: 'WHEN THE LIGHT IS LOVELY', icon: '✳', title: 'Save a little memory', detail: 'Take a photo, make a voice note, or just be right there.' },
-  { time: 'WHENEVER YOU LIKE', icon: '✦', title: 'Make your birthday wish', detail: 'Close your eyes for a second. The good stuff is still ahead.' },
+  { time: 'WHEN THE DAY BEGINS', icon: '☼', title: 'Open the curtains', detail: 'Let the morning in before the messages and plans begin.' },
+  { time: 'AROUND LUNCHTIME', icon: '♡', title: 'Order the thing you cannot pronounce', detail: 'Let the person at the counter help. It is a fine way to start a story.' },
+  { time: 'LATER IN THE DAY', icon: '✳', title: 'Set up a quick card game', detail: 'Play one round, then decide if the rematch has to happen.' },
+  { time: 'WHEN EVENING COMES', icon: '✦', title: 'Choose a delightfully bad film', detail: 'The more questionable the reviews, the better the birthday tradition.' },
 ];
 
 export const birthdayChallenges: readonly BirthdayChallenge[] = [
-  { id: 'song', label: 'Play your feel-good song', note: 'instant mood lift' },
-  { id: 'treat', label: 'Have a treat you really love', note: 'birthday permission' },
-  { id: 'photo', label: 'Take one just-for-you photo', note: 'future you says thanks' },
-  { id: 'people', label: 'Tell your favorite person you love them', note: 'send the text' },
-  { id: 'wish', label: 'Make one slightly ridiculous wish', note: 'dream big' },
+  { id: 'song', label: 'Take a 30-second dance break', note: 'no choreography needed' },
+  { id: 'treat', label: 'Draw a tiny doodle with your eyes closed', note: 'keep the masterpiece' },
+  { id: 'photo', label: 'Balance on one foot for ten seconds', note: 'bonus points for laughing' },
+  { id: 'people', label: 'Give an ordinary object a birthday name', note: 'yes, even a spoon' },
+  { id: 'wish', label: 'Make up a new holiday and name it', note: 'decide what it celebrates' },
 ];
 
 export const birthdayAppreciations: readonly BirthdayAppreciation[] = [
-  { number: '01', title: 'Your thoughtful heart', detail: 'The care you show in the little things means more than you know.' },
-  { number: '02', title: 'The way you show up', detail: 'You make time, remember what matters, and help people feel they are not facing things alone.' },
-  { number: '03', title: 'The way you see things', detail: 'You bring your own lovely point of view to every ordinary day.' },
-  { number: '04', title: 'Simply being you', detail: 'No big reason needed. You are wonderful just as you are.' },
+  { number: '01', title: 'Your honesty', detail: 'With you, there is no guessing where you stand. I value that more than I say.' },
+  { number: '02', title: 'Your follow-through', detail: 'You remember your promises long after the conversation ends.' },
+  { number: '03', title: 'Your playful side', detail: 'You can turn an ordinary moment into a joke that lasts for years.' },
+  { number: '04', title: 'Your independence', detail: 'You make your own choices and have the courage to make them yours.' },
 ];
 
 export const yearAheadWishes: readonly YearAheadWish[] = [
-  { title: 'More moments that feel like you', detail: 'Room for the people, places, and small joys that make you feel at home.' },
-  { title: 'Brave new beginnings', detail: 'Fresh chances to try, grow, and follow what makes you curious.' },
-  { title: 'Everyday reasons to smile', detail: 'Unexpected good news, familiar songs, and laughter that lasts a little longer.' },
+  { title: 'A project with your name on it', detail: 'Something you take from the first sketch all the way to finished.' },
+  { title: 'An evening worth dressing up for', detail: 'A concert, a play, or anywhere that gives you a reason to make a night of it.' },
+  { title: 'A trip with no checklist', detail: 'A new place, a loose plan, and enough time to take the scenic route.' },
 ];
 
 export const littleHighlights: readonly LittleHighlight[] = [
-  { title: 'You remember the little things', detail: 'A favorite, a passing comment, a question you promised to ask later—you have a way of making people feel seen.' },
-  { title: 'You make space for others', detail: 'You listen without rushing to fill the silence, and people can feel the difference.' },
-  { title: 'You bring your own point of view', detail: 'Your curiosity and honesty make even an ordinary conversation feel a little more interesting.' },
+  { title: 'You notice who is on the edge of the conversation', detail: 'Then you make room for them without making a fuss about it.' },
+  { title: 'You ask the question after the easy answer', detail: 'A quick catch-up with you has a way of becoming the conversation people needed.' },
+  { title: 'You find an angle no one else saw', detail: 'A familiar story sounds different when you tell it.' },
 ];
 
 export const birthdayNotes: readonly BirthdayNote[] = [
-  { id: 'adventure', number: '01', title: 'For the dreamers', message: 'May you find a new place that makes you stop, look around, and think: I’m glad I came.' },
-  { id: 'laughter', number: '02', title: 'For the laugh-out-loud days', message: 'Wishing you belly laughs, terrible inside jokes, and friends who always make room for one more story.' },
-  { id: 'quiet', number: '03', title: 'For a softer moment', message: 'Here’s your reminder that a slow day, a deep breath, and doing absolutely nothing can be a pretty perfect gift.' },
-  { id: 'confidence', number: '04', title: 'For a little courage', message: 'You do not need to have it all figured out. Take the next small step, and let that be enough for today.' },
-  { id: 'pride', number: '05', title: 'For the wins you almost missed', message: 'Think of one thing you did this year that made you proud. It counts, even if nobody else saw it.' },
-  { id: 'kindness', number: '06', title: 'For a kinder year', message: 'May you give yourself the same patience, encouragement, and second chances you so freely give to others.' },
-  { id: 'beginnings', number: '07', title: 'For a fresh start', message: 'You can begin again whenever you need to. A new page does not ask you to explain the old one.' },
-  { id: 'friendship', number: '08', title: 'For your favorite people', message: 'May your year be full of the people who make you feel at home, even when you are somewhere new.' },
-  { id: 'wonder', number: '09', title: 'For everyday magic', message: 'Keep an eye out for tiny lovely things: warm light, a familiar song, and a message that arrives right on time.' },
-  { id: 'possibility', number: '10', title: 'For all that is still ahead', message: 'There are good surprises you cannot see yet. Leave a little room in your plans for them.' },
+  { id: 'adventure', number: '01', title: 'For the nice thing you have been saving', message: 'Take out the special notebook, favorite mug, or good perfume. An ordinary day is a perfectly good reason to use it.' },
+  { id: 'laughter', number: '02', title: 'For the story with the unexpected ending', message: 'Tell it from the beginning this time. The best part is usually the detail you thought was irrelevant.' },
+  { id: 'quiet', number: '03', title: 'For something left unfinished', message: 'Leave one low-priority task for tomorrow. The world can wait while you finish your day.' },
+  { id: 'confidence', number: '04', title: 'For ending the overthinking', message: 'Set a five-minute timer and choose. Not every small decision needs a full investigation.' },
+  { id: 'pride', number: '05', title: 'For the hard choice', message: 'Remember a decision you made even though it was difficult. That took more strength than you may have noticed.' },
+  { id: 'kindness', number: '06', title: 'For being on your own side', message: 'If a friend came to you with the same worry, what would you tell them? You deserve to hear that too.' },
+  { id: 'beginnings', number: '07', title: 'For clearing a little space', message: 'Choose one small corner—a drawer, a desk, a windowsill—and make it feel like yours again.' },
+  { id: 'friendship', number: '08', title: 'For the person who knows the old you', message: 'Send them a simple hello. You do not need a big reason to pick up a conversation.' },
+  { id: 'wonder', number: '09', title: 'For a small, unexpected kindness', message: 'Leave a kind note for someone who will not know it was you. Let the good moment be its own reward.' },
+  { id: 'possibility', number: '10', title: 'For next year’s you', message: 'Write one question you hope you will have answered by your next birthday. Keep it somewhere safe.' },
 ];
