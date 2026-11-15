@@ -38,6 +38,7 @@ export interface YearAheadWish {
 export interface LittleHighlight {
   readonly title: string;
   readonly detail: string;
+  readonly note: string;
 }
 
 export const recipientName = 'Veda';
@@ -45,10 +46,10 @@ export const recipientName = 'Veda';
 export const birthdayLetter = {
   salutation: `Happy Birthday, ${recipientName}.`,
   paragraphs: [
-    'Some people make life feel less hurried just by being in it. I hope today gives back a little of the care and patience you bring to the people around you.',
-    'May this birthday bring you one new story worth retelling: an unplanned meal, a photo you did not pose for, or a small detour that turns out just right.',
-    'I hope you keep making room for the things that spark your curiosity—the questions, ideas, and little discoveries you cannot wait to share.',
-    'When you look back on today, I hope there is one moment you want to keep exactly as it was. I am glad I get to celebrate you. Happy birthday, Veda.',
+    'Today is a little reminder of how much your being here matters. The world is brighter with your kindness in it, and the people lucky enough to know you carry more happy moments because of you.',
+    'I hope this new year gives you reasons to laugh until your cheeks hurt, quiet moments when you need them, and the courage to follow the things that make your heart feel awake. And on the days that feel ordinary, I hope you still find something small that makes you glad to be right where you are.',
+    'You do not have to have everything figured out to be doing wonderfully. Keep growing at your own pace, keep making room for what feels like you, and remember to be proud of how far you have already come.',
+    'Most of all, I hope you feel celebrated today—not just for another year, but for the person you are in every little, everyday way. You deserve so much good, Veda. Happy birthday, and here is to all the lovely things still waiting for you.',
   ],
 };
 
@@ -85,7 +86,7 @@ export const birthdayChallenges: readonly BirthdayChallenge[] = [
 
 export const birthdayAppreciations: readonly BirthdayAppreciation[] = [
   { number: '01', title: 'Your thoughtful heart', detail: 'The care you show in the little things means more than you know.' },
-  { number: '02', title: 'The way you show up', detail: 'You make time, remember what matters, and help people feel they are not facing things alone.' },
+  { number: '02', title: 'Your unmistakable laugh', detail: 'A little more joy seems to find its way into the room when you laugh.' },
   { number: '03', title: 'The way you see things', detail: 'You bring your own lovely point of view to every ordinary day.' },
   { number: '04', title: 'Simply being you', detail: 'No big reason needed. You are wonderful just as you are.' },
 ];
@@ -97,9 +98,9 @@ export const yearAheadWishes: readonly YearAheadWish[] = [
 ];
 
 export const littleHighlights: readonly LittleHighlight[] = [
-  { title: 'You remember the little things', detail: 'A favorite, a passing comment, a question you promised to ask later—you have a way of making people feel seen.' },
-  { title: 'You make space for others', detail: 'You listen without rushing to fill the silence, and people can feel the difference.' },
-  { title: 'You bring your own point of view', detail: 'Your curiosity and honesty make even an ordinary conversation feel a little more interesting.' },
+  { title: 'Your laugh', detail: 'The kind that makes a room feel lighter without even trying.', note: 'always a mood-lifter' },
+  { title: 'Your calm', detail: 'You bring a softness to hard days that people are lucky to feel.', note: 'quietly comforting' },
+  { title: 'Your glow', detail: 'The way you carry yourself turns ordinary moments into something memorable.', note: 'beautifully yours' },
 ];
 
 export const birthdayNotes: readonly BirthdayNote[] = [

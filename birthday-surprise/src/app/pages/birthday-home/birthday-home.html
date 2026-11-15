@@ -36,14 +36,13 @@
 
   <section class="little-highlights section-pad" id="little-highlights">
     <div class="little-highlights-heading" appReveal>
-      <p class="eyebrow">The little things people remember</p>
+      <p class="eyebrow">A few favorite things</p>
       <h2>Why you are <em>so loved.</em></h2>
-      <p>It shows in how you listen, what you notice, and the way you make people feel welcome.</p>
     </div>
     <div class="highlight-grid">
-      @for (highlight of littleHighlights; track highlight.title; let index = $index) {
+      @for (highlight of littleHighlights; track highlight.title) {
         <article class="highlight-card" appReveal>
-          <span class="highlight-number">0{{ index + 1 }}</span>
+          <span class="highlight-note">{{ highlight.note }}</span>
           <h3>{{ highlight.title }}</h3>
           <p>{{ highlight.detail }}</p>
         </article>
