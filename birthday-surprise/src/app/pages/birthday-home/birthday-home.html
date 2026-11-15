@@ -193,33 +193,6 @@
     </div>
   </section>
 
-  <section class="birthday-surprise section-pad" id="birthday-surprise">
-    <article class="surprise-card" appReveal>
-      <p class="eyebrow">A little something, just for today</p>
-      @if (!birthdaySurpriseOpen) {
-        <div class="surprise-sealed">
-          <span class="surprise-seal" aria-hidden="true">♡</span>
-          <h2>One little surprise,<br><em>just for you.</em></h2>
-          <p>There’s a birthday note tucked inside. Open it whenever you’re ready.</p>
-          <button class="surprise-button" type="button" (click)="toggleBirthdaySurprise()">
-            Open your surprise <span aria-hidden="true">↗</span>
-          </button>
-        </div>
-      } @else {
-        <div class="surprise-message">
-          <span class="surprise-message-mark" aria-hidden="true">✦</span>
-          <h2>Happy Birthday,<br><em>{{ recipientName }}.</em></h2>
-          <p>I hope today gives you a hundred little reasons to smile—and reminds you how much brighter the world is with you in it.</p>
-          <p>Keep this year for the things that make you feel most like yourself. You deserve all the good that’s finding its way to you.</p>
-          <p class="surprise-signoff">With love, today and always.</p>
-          <button class="surprise-button surprise-close" type="button" (click)="toggleBirthdaySurprise()">
-            Tuck it away <span aria-hidden="true">↻</span>
-          </button>
-        </div>
-      }
-    </article>
-  </section>
-
   <section class="closing-note" appReveal>
     <span class="closing-star" aria-hidden="true">✦</span>
     <p>That’s the whole plan.</p>
