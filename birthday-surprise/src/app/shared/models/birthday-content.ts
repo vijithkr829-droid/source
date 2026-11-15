@@ -40,16 +40,16 @@ export const recipientName = 'Veda';
 export const birthdayLetter = {
   salutation: `Happy Birthday, ${recipientName}.`,
   paragraphs: [
-    'A birthday can feel like a line between chapters, but you do not have to have the next one mapped out. You can take your time, change your mind, and let the year unfold one choice at a time.',
-    'I hope you find a detail here that makes you smile and reminds you how much care went into making this day yours.',
-    'However you spend today, I hope it feels like a good fit for you. I am glad I get to celebrate you, Veda.',
+    'I wanted your birthday to have something you could keep, not just another message that disappears into a chat. So I gathered the photos, music, and words on this page with you in mind.',
+    'There is no sequence to follow and nothing you need to do here. I just hope opening it gives you a quiet moment to feel celebrated.',
+    'Have a lovely birthday, Veda. I am glad today gives me a reason to say that properly.',
   ],
 };
 
 export const heartfeltMessage = {
   paragraphs: [
-    'I still miss you. Every now and then, something happens and my first instinct is to tell you; that is when I notice the distance most.',
-    'I am not writing this to ask anything of you. I am simply grateful our paths crossed, and I hope today brings you a few moments of real joy.',
+    'I still miss you, especially in the small in-between moments: when I hear a song you would have had an opinion about, or see something I would once have sent you.',
+    'I know we have our own lives now. I wanted to be honest about what I feel without asking you to do anything with it.',
   ],
 };
 
@@ -72,9 +72,9 @@ export const birthdayMoments: readonly BirthdayMoment[] = [
 export const birthdayChallenges: readonly BirthdayChallenge[] = [
   { id: 'flavor', label: 'Try a flavor you have never ordered', note: 'a small experiment' },
   { id: 'dance', label: 'Learn a silly dance move', note: 'no audience required' },
-  { id: 'voice-note', label: 'Record a message for next-year you', note: 'open it someday' },
+  { id: 'photo', label: 'Take a deliberately dramatic birthday photo', note: 'commit to the pose' },
   { id: 'sketch', label: 'Draw a tiny birthday doodle', note: 'art is optional' },
-  { id: 'wish', label: 'Write down one bold wish', note: 'keep it somewhere safe' },
+  { id: 'playlist', label: 'Add one song to a birthday playlist', note: 'start a new tradition' },
 ];
 
 export const birthdayAppreciations: readonly BirthdayAppreciation[] = [
@@ -91,14 +91,14 @@ export const yearAheadWishes: readonly YearAheadWish[] = [
 ];
 
 export const birthdayNotes: readonly BirthdayNote[] = [
-  { id: 'adventure', number: '01', title: 'For the curious', message: 'May a detour take you somewhere you would never have found by following the usual route.' },
-  { id: 'laughter', number: '02', title: 'For the ridiculous days', message: 'May you laugh at something so silly that explaining the joke only makes it funnier.' },
-  { id: 'quiet', number: '03', title: 'For a proper pause', message: 'Here is permission to leave an evening completely unbooked and enjoy every minute of it.' },
-  { id: 'confidence', number: '04', title: 'For the clear yes', message: 'Trust the answer that feels right to you before checking whether it is the popular one.' },
-  { id: 'pride', number: '05', title: 'For the finish line', message: 'When you complete something demanding, take a moment to enjoy being done before choosing what comes next.' },
-  { id: 'kindness', number: '06', title: 'For your own voice', message: 'Talk to yourself with the same generosity you would offer someone you love.' },
-  { id: 'beginnings', number: '07', title: 'For the first attempt', message: 'You are allowed to be new at something. Nobody starts out knowing how it will turn out.' },
-  { id: 'friendship', number: '08', title: 'For your people', message: 'May the people you love know exactly how much better your life is with them in it.' },
-  { id: 'wonder', number: '09', title: 'For looking closer', message: 'Let yourself get interested in something for no reason beyond the fact that it caught your attention.' },
-  { id: 'possibility', number: '10', title: 'For the unexpected', message: 'If a plan falls through, may the open space make room for something you would not have thought to ask for.' },
+  { id: 'adventure', number: '01', title: 'For a change of scene', message: 'May you find yourself somewhere new today, even if it is only a café one street over.' },
+  { id: 'laughter', number: '02', title: 'For a ridiculous laugh', message: 'May someone tell you a story so absurd that you have to hear it twice.' },
+  { id: 'quiet', number: '03', title: 'For the cake debate', message: 'May the best slice be the one with the most frosting, and may nobody question your choice.' },
+  { id: 'confidence', number: '04', title: 'For the perfect song', message: 'May your favorite song come on just when you need it, loud enough to sing along.' },
+  { id: 'pride', number: '05', title: 'For a lovely surprise', message: 'May a message, a knock at the door, or an unexpected treat brighten an ordinary minute.' },
+  { id: 'kindness', number: '06', title: 'For your birthday table', message: 'May you share a meal with people who make time disappear in the nicest way.' },
+  { id: 'beginnings', number: '07', title: 'For a little sparkle', message: 'May the light hit just right when you look in the mirror today.' },
+  { id: 'friendship', number: '08', title: 'For the old stories', message: 'May someone bring up a memory that still makes you smile before they reach the punchline.' },
+  { id: 'wonder', number: '09', title: 'For golden hour', message: 'May you catch one of those skies that makes everyone pause and look up.' },
+  { id: 'possibility', number: '10', title: 'For the final minutes', message: 'May the day end with your favorite kind of tired: full, content, and already smiling at one moment from it.' },
 ];

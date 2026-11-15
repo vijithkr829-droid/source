@@ -1,4 +1,4 @@
-import { birthdayAppreciations, birthdayChallenges, birthdayMoments, birthdayNotes, heartfeltMessage, memories, yearAheadWishes } from './shared/models/birthday-content';
+import { birthdayAppreciations, birthdayChallenges, birthdayLetter, birthdayMoments, birthdayNotes, heartfeltMessage, memories, yearAheadWishes } from './shared/models/birthday-content';
 import { routes } from './app.routes';
 
 describe('Birthday experience content', () => {
@@ -31,6 +31,21 @@ describe('Birthday experience content', () => {
     expect(new Set(birthdayNotes.map((note) => note.message)).size).toBe(birthdayNotes.length);
   });
 
+  it('does not repeat birthday copy verbatim across sections', () => {
+    const paragraphs = [
+      ...birthdayLetter.paragraphs,
+      ...heartfeltMessage.paragraphs,
+      ...birthdayNotes.map((note) => note.message),
+      ...birthdayMoments.map((moment) => moment.detail),
+      ...birthdayChallenges.map((challenge) => challenge.label),
+      ...birthdayChallenges.map((challenge) => challenge.note),
+      ...birthdayAppreciations.map((appreciation) => appreciation.detail),
+      ...yearAheadWishes.map((wish) => wish.detail),
+    ];
+
+    expect(new Set(paragraphs).size).toBe(paragraphs.length);
+  });
+
   it('includes personal appreciations and wishes for the year ahead', () => {
     expect(birthdayAppreciations).toHaveLength(4);
     expect(yearAheadWishes).toHaveLength(3);
@@ -40,7 +55,7 @@ describe('Birthday experience content', () => {
 
   it('includes a heartfelt personal message with a gentle closing', () => {
     expect(heartfeltMessage.paragraphs).toHaveLength(2);
-    expect(heartfeltMessage.paragraphs[0]).toContain('I still miss you.');
-    expect(heartfeltMessage.paragraphs[1]).toContain('not writing this to ask anything of you');
+    expect(heartfeltMessage.paragraphs[0]).toContain('I still miss you, especially');
+    expect(heartfeltMessage.paragraphs[1]).toContain('without asking you to do anything with it');
   });
 });
