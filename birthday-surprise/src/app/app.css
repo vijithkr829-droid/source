@@ -196,10 +196,6 @@
     border-bottom: none;
   }
 
-  .site-nav {
-    display: none;
-  }
-
   .header-inner {
     display: flex;
     flex-direction: column;
