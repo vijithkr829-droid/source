@@ -40,8 +40,8 @@ describe('Birthday experience content', () => {
 
   it('includes a heartfelt personal message with a gentle closing', () => {
     expect(heartfeltMessage.paragraphs).toHaveLength(2);
-    expect(heartfeltMessage.paragraphs[0]).toContain('our relationship has ended');
-    expect(heartfeltMessage.paragraphs[1]).toContain('I do not expect a reply');
+    expect(heartfeltMessage.paragraphs[0]).toContain('what we shared still matters to me');
+    expect(heartfeltMessage.paragraphs[1]).toContain('no expectation that you reply');
   });
 
   it('uses distinct prose across the birthday letter, notes, wishes, and highlights', () => {
