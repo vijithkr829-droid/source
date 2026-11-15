@@ -29,16 +29,16 @@
         <p class="eyebrow">The memory shelf</p>
         <h2>Little snapshots,<br><em>big feelings.</em></h2>
       </div>
-      <p>Six snapshots from days we are glad to remember.</p>
+      <p>Six snapshots from days I still remember fondly.</p>
     </div>
     <app-photo-gallery [photos]="memories" />
   </section>
 
   <section class="little-highlights section-pad" id="little-highlights">
     <div class="little-highlights-heading" appReveal>
-      <p class="eyebrow">A closer look</p>
-      <h2>The <em>Veda effect.</em></h2>
-      <p>Small details, easy to miss until you know her.</p>
+      <p class="eyebrow">Looking back</p>
+      <h2>A chapter I <em>remember.</em></h2>
+      <p>Some things from our time together are still worth appreciating.</p>
     </div>
     <div class="highlight-grid">
       @for (highlight of littleHighlights; track highlight.title) {
@@ -133,9 +133,9 @@
 
   <section class="appreciation-section section-pad" id="things-i-love">
     <div class="appreciation-heading" appReveal>
-      <p class="eyebrow">A few things worth saying</p>
-      <h2>Things that make<br><em>you, you.</em></h2>
-      <p>Not grand gestures—just qualities I notice and appreciate in you.</p>
+      <p class="eyebrow">What I admired about you</p>
+      <h2>Things I <em>valued.</em></h2>
+      <p>These are qualities I appreciated during our time together.</p>
     </div>
     <div class="appreciation-list">
       @for (appreciation of birthdayAppreciations; track appreciation.number) {
@@ -175,10 +175,10 @@
 
   <section class="year-ahead section-pad" id="year-ahead">
     <div class="year-ahead-heading" appReveal>
-      <p class="eyebrow">A little wish for what’s next</p>
+      <p class="eyebrow">Wishes for your year ahead</p>
       <h2>Make room for<br><em>what’s next.</em></h2>
-      <p>Three different possibilities to take into the year ahead: one to make, one to master, and one to discover.</p>
-      <span class="year-ahead-signoff">With all my love, for the year ahead.</span>
+      <p>Three simple hopes for the year ahead, wherever life takes you.</p>
+      <span class="year-ahead-signoff">Wishing you well, today and in the year ahead.</span>
     </div>
     <div class="year-ahead-wishes">
       @for (wish of yearAheadWishes; track wish.title) {
@@ -206,8 +206,8 @@
         </div>
       } @else {
         <div class="surprise-message" id="surprise-message">
-          <h2>One thing I<br><em>wanted to say.</em></h2>
-          <p>There is no perfect way to sum up what someone has meant to you. So I will keep it simple: I am glad our paths crossed, Veda.</p>
+          <h2>A birthday wish,<br><em>with care.</em></h2>
+          <p>A small birthday wish for you: may the year ahead bring a few genuinely good surprises and plenty of moments when you can relax and enjoy them.</p>
           <p class="surprise-signoff">Happy birthday.</p>
           <p class="surprise-reopen-hint">You can close this note below and open it again anytime.</p>
           <button class="surprise-button surprise-close" type="button" (click)="toggleBirthdaySurprise()">
@@ -221,7 +221,7 @@
   <section class="closing-note" appReveal>
     <span class="closing-star" aria-hidden="true">✦</span>
     <p>That’s the whole plan.</p>
-    <h2>The next chapter is <em>yours.</em></h2>
-    <span class="closing-caption">Here’s to you, {{ recipientName }}.</span>
+    <h2>Be here. Be <em>you.</em></h2>
+    <span class="closing-caption">Happy birthday, {{ recipientName }}.</span>
   </section>
 </div>

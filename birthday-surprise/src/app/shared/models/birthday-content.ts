@@ -45,16 +45,16 @@ export const recipientName = 'Veda';
 export const birthdayLetter = {
   salutation: `Happy Birthday, ${recipientName}.`,
   paragraphs: [
-    'I hope today frees you from being the one who remembers everything. Let somebody else choose the time, the place, and the small details for a change.',
-    'When someone says something kind about you, try not to talk them out of it. Let the words stay for a moment.',
-    'I hope this birthday feels like yours from the first moment to the last. Happy birthday, Veda.',
+    'I hope your birthday has the things you enjoy most: a favorite meal, easy conversation, and time to yourself if you want it.',
+    'May the year ahead bring new experiences, good surprises, and reasons to feel proud of what you make of it.',
+    'I remember this day with warmth and wish you well. Happy birthday, Veda.',
   ],
 };
 
 export const heartfeltMessage = {
   paragraphs: [
-    'I miss you most in ordinary moments: when something happens and you are still the person I want to tell, or when an old joke comes back to me. I know life has changed, and I do not expect anything from you today. I only wanted to be honest that what we shared still matters to me.',
-    'I do not want that feeling to take over your birthday. I am wishing you a happy day, with no expectation that you reply—this is simply something I wanted you to know.',
+    'I still miss talking with you sometimes, especially the ordinary conversations that had no particular reason behind them. I know our relationship has ended, and I respect that. Missing what we had does not mean I expect it to return.',
+    'I do not expect a reply. I just wanted to be honest about how I feel, while still leaving your birthday yours.',
   ],
 };
 
@@ -83,22 +83,22 @@ export const birthdayChallenges: readonly BirthdayChallenge[] = [
 ];
 
 export const birthdayAppreciations: readonly BirthdayAppreciation[] = [
-  { number: '01', title: 'Your honesty', detail: 'With you, there is no guessing where you stand. I value that more than I say.' },
-  { number: '02', title: 'Your follow-through', detail: 'You remember your promises long after the conversation ends.' },
-  { number: '03', title: 'Your playful side', detail: 'You can turn an ordinary moment into a joke that lasts for years.' },
-  { number: '04', title: 'Your independence', detail: 'You make your own choices and have the courage to make them yours.' },
+  { number: '01', title: 'Your honesty', detail: 'You were willing to say what you really thought, even when it was not the easiest thing to say.' },
+  { number: '02', title: 'Your determination', detail: 'When something mattered to you, you kept at it in your own way and on your own terms.' },
+  { number: '03', title: 'Your sense of humor', detail: 'I still remember how a well-timed joke could take the weight out of an ordinary day.' },
+  { number: '04', title: 'Your independence', detail: 'I admired that you made your choices for yourself and kept becoming more fully you.' },
 ];
 
 export const yearAheadWishes: readonly YearAheadWish[] = [
-  { title: 'A project with your name on it', detail: 'Something you take from the first sketch all the way to finished.' },
-  { title: 'An evening worth dressing up for', detail: 'A concert, a play, or anywhere that gives you a reason to make a night of it.' },
-  { title: 'A trip with no checklist', detail: 'A new place, a loose plan, and enough time to take the scenic route.' },
+  { title: 'Something new to get curious about', detail: 'A subject, class, or small project that is interesting just because it is interesting.' },
+  { title: 'A night that feels like a treat', detail: 'A concert, a film, or a favorite meal enjoyed at your own pace.' },
+  { title: 'A place you have not seen yet', detail: 'A day trip or a longer journey, with room to take the route that looks good.' },
 ];
 
 export const littleHighlights: readonly LittleHighlight[] = [
-  { title: 'You notice who is on the edge of the conversation', detail: 'Then you make room for them without making a fuss about it.' },
-  { title: 'You ask the question after the easy answer', detail: 'A quick catch-up with you has a way of becoming the conversation people needed.' },
-  { title: 'You find an angle no one else saw', detail: 'A familiar story sounds different when you tell it.' },
+  { title: 'The ordinary days', detail: 'Some of the memories I keep most warmly are not big occasions, just time spent together without needing a plan.' },
+  { title: 'What I learned', detail: 'Knowing you gave me new ways to think about patience, communication, and seeing things from another point of view.' },
+  { title: 'A chapter that mattered', detail: 'Our relationship changed, but it was still a real part of my life—and I can remember it with gratitude.' },
 ];
 
 export const birthdayNotes: readonly BirthdayNote[] = [
