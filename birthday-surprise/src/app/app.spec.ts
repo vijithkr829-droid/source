@@ -27,6 +27,8 @@ describe('Birthday experience content', () => {
   it('offers ten distinct birthday notes', () => {
     expect(birthdayNotes).toHaveLength(10);
     expect(new Set(birthdayNotes.map((note) => note.id)).size).toBe(birthdayNotes.length);
+    expect(new Set(birthdayNotes.map((note) => note.title)).size).toBe(birthdayNotes.length);
+    expect(new Set(birthdayNotes.map((note) => note.message)).size).toBe(birthdayNotes.length);
   });
 
   it('includes personal appreciations and wishes for the year ahead', () => {
@@ -38,7 +40,7 @@ describe('Birthday experience content', () => {
 
   it('includes a heartfelt personal message with a gentle closing', () => {
     expect(heartfeltMessage.paragraphs).toHaveLength(2);
-    expect(heartfeltMessage.paragraphs[0]).toContain('I miss you, more than I can explain.');
-    expect(heartfeltMessage.paragraphs[1]).toContain('grateful for the moments we shared');
+    expect(heartfeltMessage.paragraphs[0]).toContain('I still miss you.');
+    expect(heartfeltMessage.paragraphs[1]).toContain('not writing this to ask anything of you');
   });
 });

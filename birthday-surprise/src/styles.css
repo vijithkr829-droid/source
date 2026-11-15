@@ -67,18 +67,11 @@ img { display: block; }
 .heartfelt-copy { max-width: 570px; margin: 25px auto 0; }
 .heartfelt-copy p { margin: 0; color: var(--muted); font-size: 13px; line-height: 2; }
 .heartfelt-copy p + p { margin-top: 17px; color: #806f69; font-family: var(--serif); font-size: 15px; font-style: italic; }
-.closing-note { display: flex; flex-direction: column; align-items: center; padding: 76px 24px 82px; background: linear-gradient(135deg, #f3e8e1, #e8d7cf 52%, #f5ebe4); text-align: center; }
-.closing-star { margin-bottom: 14px; color: var(--gold); font-size: 21px; }
-.closing-note > p { margin: 0 0 9px; color: var(--rose-deep); font-size: 9px; font-weight: 700; letter-spacing: 1.8px; text-transform: uppercase; }
-.closing-note h2 { margin: 0; font-family: var(--serif); font-size: clamp(46px, 6vw, 68px); font-weight: 400; letter-spacing: -2px; line-height: 1.1; }
-.closing-note h2 em { color: var(--rose-deep); }
-.closing-caption { margin-top: 17px; color: #786964; font-family: var(--serif); font-size: 14px; font-style: italic; }
 .year-ahead { display: grid; grid-template-columns: .9fr 1.1fr; align-items: center; gap: 80px; background: linear-gradient(135deg, #6e434c, #84535b 58%, #684049); color: #fff9f3; }
 .year-ahead .eyebrow { color: #f0d7b4; }
 .year-ahead-heading h2 { font-size: clamp(43px, 5vw, 62px); }
 .year-ahead-heading h2 em { color: #f0d7b4; font-weight: 400; }
 .year-ahead-heading > p:not(.eyebrow) { max-width: 340px; margin: 18px 0 0; color: rgba(255, 249, 243, .78); font-size: 12px; line-height: 1.9; }
-.year-ahead-signoff { display: block; margin-top: 25px; color: #f0d7b4; font-family: var(--serif); font-size: 14px; font-style: italic; }
 .year-ahead-wishes { border-top: 1px solid rgba(255, 249, 243, .25); }
 .year-ahead-wish { display: grid; grid-template-columns: 30px 1fr; gap: 15px; padding: 21px 0; border-bottom: 1px solid rgba(255, 249, 243, .25); }
 .year-ahead-star { padding-top: 3px; color: #f0d7b4; font-size: 15px; }
@@ -113,7 +106,6 @@ img { display: block; }
   .birthday-challenge { grid-template-columns: 29px minmax(0, 1fr); gap: 9px; min-height: 64px; }
   .birthday-challenge > span:nth-child(2) { font-size: 15px; }
   .challenge-note { grid-column: 2; margin-top: -6px; }
-  .closing-note { padding: 59px 20px max(65px, env(safe-area-inset-bottom)); }
   .appreciation-list { grid-template-columns: 1fr; }
   .appreciation-item { min-height: auto; }
 }

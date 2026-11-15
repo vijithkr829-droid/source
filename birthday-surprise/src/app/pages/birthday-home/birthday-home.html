@@ -4,8 +4,8 @@
       <p class="eyebrow"><span></span> Today is all yours</p>
       <p class="recipient-name">{{ recipientName }}<span class="name-period">.</span></p>
       <h1>A whole day to celebrate <em>you.</em></h1>
-      <p class="opening-intro">Here’s to good cake, favorite people, and the kind of little moments you’ll want to keep.</p>
-      <p class="opening-footnote"><span aria-hidden="true">✦</span> Your day, your pace, your kind of happy</p>
+      <p class="opening-intro">I made this page just for you. Take your time with it; there is no right order, only things I wanted you to see.</p>
+      <p class="opening-footnote"><span aria-hidden="true">✦</span> A small gift, made with care</p>
     </div>
     <figure class="opening-image" appReveal>
       <img
@@ -17,44 +17,26 @@
         (error)="hideMissingImage($event)"
       >
       <div class="opening-image-fallback" aria-hidden="true"><span>V.</span></div>
-      <figcaption><span>A little moment, kept close</span><span>01 / 06</span></figcaption>
-      <span class="image-note">Make a wish<br>and make it yours</span>
+      <figcaption><span>01 / 06</span></figcaption>
     </figure>
-    <span class="opening-side-note" aria-hidden="true">HAPPY BIRTHDAY</span>
   </section>
 
   <section class="memories-section section-pad" id="memories">
     <div class="section-heading section-heading-row" appReveal>
       <div>
         <p class="eyebrow">The memory shelf</p>
-        <h2>Little snapshots,<br><em>big feelings.</em></h2>
+        <h2>Scenes worth<br><em>coming back to.</em></h2>
       </div>
-      <p>Six favorite moments, ready to be filled with your own photos and stories.</p>
+      <p>Six frames, each with its own setting and story.</p>
     </div>
     <app-photo-gallery [photos]="memories" />
   </section>
 
-  <section class="little-highlights section-pad" id="little-highlights">
-    <div class="little-highlights-heading" appReveal>
-      <p class="eyebrow">A few favorite things</p>
-      <h2>Why you are <em>so loved.</em></h2>
-    </div>
-    <div class="highlight-grid">
-      @for (highlight of littleHighlights; track highlight.title) {
-        <article class="highlight-card" appReveal>
-          <span class="highlight-note">{{ highlight.note }}</span>
-          <h3>{{ highlight.title }}</h3>
-          <p>{{ highlight.detail }}</p>
-        </article>
-      }
-    </div>
-  </section>
-
   <section class="birthday-plan section-pad" id="birthday-plan">
     <div class="plan-heading" appReveal>
-      <p class="eyebrow">A very unofficial itinerary</p>
-      <h2>Today has room<br>for <em>everything.</em></h2>
-      <p>No schedule to keep. Just a few lovely ideas for whenever they feel right.</p>
+      <p class="eyebrow">A loose plan</p>
+      <h2>A gentle shape<br>for <em>the day.</em></h2>
+      <p>Four optional ideas for the usual turning points in the day.</p>
     </div>
     <div class="plan-timeline">
       @for (moment of birthdayMoments; track moment.time) {
@@ -72,9 +54,9 @@
 
   <section class="wish-jar section-pad" id="birthday-notes">
     <div class="wish-jar-intro" appReveal>
-      <p class="eyebrow">Pick a little birthday note</p>
-      <h2>A wish for<br><em>right now.</em></h2>
-      <p>Choose the feeling you want to carry into your new year.</p>
+      <p class="eyebrow">Choose one to open</p>
+      <h2>A note for<br><em>this moment.</em></h2>
+      <p>Ten small messages; pick whichever speaks to you today.</p>
     </div>
     <div class="wish-jar-options">
       @for (note of birthdayNotes; track note.id) {
@@ -101,9 +83,9 @@
 
   <section class="little-list section-pad" id="little-list">
     <div class="little-list-heading" appReveal>
-      <p class="eyebrow">A tiny birthday bucket list</p>
-      <h2>Collect a few<br><em>little moments.</em></h2>
-      <p>Pick any that sound fun. There’s no score and definitely no homework.</p>
+      <p class="eyebrow">Optional birthday side quests</p>
+      <h2>Five ideas<br><em>just for fun.</em></h2>
+      <p>Try one, try all five, or make up a better list of your own.</p>
     </div>
     <div class="little-list-content">
       <div class="little-list-progress" role="progressbar" [attr.aria-valuenow]="completedMomentCount" aria-valuemin="0" [attr.aria-valuemax]="birthdayChallenges.length" [attr.aria-label]="completedMomentCount + ' of ' + birthdayChallenges.length + ' birthday moments picked'">
@@ -133,9 +115,8 @@
 
   <section class="appreciation-section section-pad" id="things-i-love">
     <div class="appreciation-heading" appReveal>
-      <p class="eyebrow">A few things worth saying</p>
-      <h2>Things that make<br><em>you, you.</em></h2>
-      <p>There are a hundred more, but these deserve a little space of their own.</p>
+      <p class="eyebrow">In case you forget</p>
+      <h2>Things I <em>admire.</em></h2>
     </div>
     <div class="appreciation-list">
       @for (appreciation of birthdayAppreciations; track appreciation.number) {
@@ -154,7 +135,7 @@
   <section class="heartfelt-section section-pad" id="from-my-heart">
     <div class="heartfelt-card" appReveal>
       <span class="heartfelt-mark" aria-hidden="true">♡</span>
-      <p class="eyebrow">A thought from my heart</p>
+      <p class="eyebrow">Something I wanted you to know</p>
       <h2>Some feelings<br><em>stay with us.</em></h2>
       <div class="heartfelt-copy">
         @for (paragraph of heartfeltMessage.paragraphs; track paragraph) {
@@ -167,18 +148,17 @@
   <section class="letter-section section-pad" id="letter">
     <div class="letter-heading" appReveal>
       <span class="letter-heading-mark" aria-hidden="true">✳</span>
-      <p class="eyebrow">One thing to remember</p>
-      <h2>A note, just <em>for you.</em></h2>
+      <p class="eyebrow">A letter from me</p>
+      <h2>For this <em>chapter.</em></h2>
     </div>
     <app-letter-card [salutation]="letter.salutation" [paragraphs]="letter.paragraphs" />
   </section>
 
   <section class="year-ahead section-pad" id="year-ahead">
     <div class="year-ahead-heading" appReveal>
-      <p class="eyebrow">A little wish for what’s next</p>
-      <h2>May this year<br>bring you <em>more.</em></h2>
-      <p>More of what feels good, more of what makes you grow, and plenty of lovely surprises along the way.</p>
-      <span class="year-ahead-signoff">With all my love, for the year ahead.</span>
+      <p class="eyebrow">Looking ahead</p>
+      <h2>For the year<br><em>to come.</em></h2>
+      <p>Three hopes for the months ahead, each one yours to shape.</p>
     </div>
     <div class="year-ahead-wishes">
       @for (wish of yearAheadWishes; track wish.title) {
@@ -193,10 +173,4 @@
     </div>
   </section>
 
-  <section class="closing-note" appReveal>
-    <span class="closing-star" aria-hidden="true">✦</span>
-    <p>That’s the whole plan.</p>
-    <h2>Be here. Be <em>you.</em></h2>
-    <span class="closing-caption">Happy birthday, {{ recipientName }}.</span>
-  </section>
 </div>
