@@ -89,16 +89,15 @@ img { display: block; }
 .surprise-card::before { position: absolute; inset: 9px; border: 1px solid rgba(163,119,101,.12); content: ""; pointer-events: none; }
 .surprise-card > .eyebrow { margin-bottom: 20px; }
 .surprise-sealed, .surprise-message { position: relative; }
-.surprise-seal, .surprise-message-mark { width: 48px; height: 48px; display: grid; place-items: center; margin: 0 auto 17px; border: 1px solid var(--gold); border-radius: 50%; color: var(--rose-deep); font-family: var(--serif); font-size: 22px; }
 .surprise-sealed h2, .surprise-message h2 { margin: 0; font-family: var(--serif); font-size: clamp(36px, 5vw, 48px); font-weight: 400; letter-spacing: -1.5px; line-height: 1.1; }
 .surprise-sealed h2 em, .surprise-message h2 em { color: var(--rose-deep); font-weight: 400; }
 .surprise-sealed > p, .surprise-message > p { max-width: 440px; margin: 16px auto 0; color: var(--muted); font-size: 12px; line-height: 1.9; }
-.surprise-button { position: relative; min-height: 44px; display: inline-flex; align-items: center; justify-content: center; gap: 16px; margin-top: 24px; padding: 0 19px; border: 0; background: var(--ink); color: white; font: 600 10px var(--sans); letter-spacing: .3px; cursor: pointer; transition: background .2s ease, transform .2s ease; }
+.surprise-button { position: relative; min-height: 44px; display: inline-flex; align-items: center; justify-content: center; margin-top: 24px; padding: 0 19px; border: 0; background: var(--ink); color: white; font: 600 10px var(--sans); letter-spacing: .3px; cursor: pointer; transition: background .2s ease, transform .2s ease; }
 .surprise-button:hover { transform: translateY(-2px); background: var(--rose-deep); }
 .surprise-signoff { color: var(--rose-deep) !important; font-family: var(--serif); font-size: 14px !important; font-style: italic; }
+.surprise-reopen-hint { font-size: 10px !important; }
 .surprise-close { background: transparent; color: var(--rose-deep); }
 .surprise-close:hover { background: rgba(169,104,109,.08); }
-.surprise-message-mark { color: var(--gold); }
 
 @media (max-width: 900px) {
   .birthday-plan, .little-list, .appreciation-section, .year-ahead { gap: 42px; }
